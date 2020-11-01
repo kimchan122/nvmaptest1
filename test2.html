@@ -628,7 +628,20 @@
                 strokeOpacity: 0.6,
                 strokeWeight: 3
             });
-            var Godeok_Gangil_2_5 = new naver.maps.Polygon({ // 고덕강일 3지구 10블럭 2021 상반기
+            naver.maps.Event.addListener(Godeok_Gangil_2_5, 'mouseover', function() {
+                Godeok_Gangil_2_5.setOptions({
+                    strokeColor: '#E51D1A',
+                    strokeOpacity: 1
+                });
+            });
+            naver.maps.Event.addListener(Godeok_Gangil_2_5, 'mouseout', function() {
+                Godeok_Gangil_2_5.setOptions({
+                    strokeColor: '#ff0000',
+                    strokeOpacity: 0.6
+                });
+            });
+
+            var Godeok_Gangil_3_10 = new naver.maps.Polygon({ // 고덕강일 3지구 10블럭 2021 상반기
                 map: map,
                 paths: [
                     [
