@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>나만의 개발지도</title>
+    <title>나만의 지도</title>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=oflxsb0m93">
     </script>
@@ -626,18 +626,23 @@
                 fillOpacity: 0.3,
                 strokeColor: '#ff0000',
                 strokeOpacity: 0.6,
-                strokeWeight: 3
+                strokeWeight: 3,
+                clickable: true
             });
             naver.maps.Event.addListener(Godeok_Gangil_2_5, 'mouseover', function() {
                 Godeok_Gangil_2_5.setOptions({
-                    strokeColor: '#E51D1A',
-                    strokeOpacity: 1
+                    strokeColor: '#1E90FF',
+                    fillOpacity: 0.5,
+                    strokeOpacity: 1,
+                    strokeWeight: 5,
                 });
             });
             naver.maps.Event.addListener(Godeok_Gangil_2_5, 'mouseout', function() {
                 Godeok_Gangil_2_5.setOptions({
+                    fillOpacity: 0.3,
                     strokeColor: '#ff0000',
-                    strokeOpacity: 0.6
+                    strokeOpacity: 0.6,
+                    strokeWeight: 3,
                 });
             });
 
