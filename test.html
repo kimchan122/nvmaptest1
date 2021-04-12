@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>나만의 지도</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=oflxsb0m93"></script>
+    <style>
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        #dark{
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.5;
+        }
+        #layer {
+            background-color: white;
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 5px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            padding: 2px;
+            z-index: 100;
+            width: 80px;
+            height: 20px;
+            line-height: 5px;
+            text-align: center;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map">
+        <div id="wrap2" style="color:rbg(255,255,255);">
+            <h2></h2>
+            <h3></h3>
+        </div>
+        <div id="discription">
+            <p></p>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.5627988, 126.9835334),
+            zoom: 11,
+            zoomControl: true,
+            zoomControlOptions : {
+		        position : naver.maps.Position.TOP_RIGHT
+	        },
+            mapTypeControl: false,
+            
+            mapTypes: new naver.maps.MapTypeRegistry({
+                'normal': naver.maps.NaverStyleMapTypeOption.getNormalMap({
+                    //overlayType: 'bg.sw'
+                })
+            }),
+        });
+        
+        naver.maps.Event.addListener(map, 'click', function (e) {
+			var dummy = document.createElement("textarea");
+			document.body.appendChild(dummy);
+			dummy.value = e.coord.lat() + ', ' + e.coord.lng();
+			dummy.select();
+			document.execCommand("copy");
+			document.body.removeChild(dummy);
+
+		});
+
+        window.addEventListener('DOMContentLoaded', function () {
+            resize();
+            window.addEventListener('resize', resize);
+        });
+        function resize() {
+            var Size = new naver.maps.Size(window.innerWidth - 16, window.innerHeight - 16);
+            map.setSize(Size);
+        }
+        var metro=new Array();
+
+
+    </script>
+    <div id="dark">
+
+    </div>
+    <script src="./TrainLine_Seoul.js"></script>
+    <script src="./TrainLine_Busan.js"></script>
+    <script src="./Apartment.js"></script>
+</body>
+
+</html>
