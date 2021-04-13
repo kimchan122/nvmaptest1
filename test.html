@@ -52,22 +52,25 @@
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
+        var registry = new naver.maps.MapTypeRegistry();
         var map = new naver.maps.Map('map', {
-            center: new naver.maps.LatLng(37.5627988, 126.9835334),
             zoom: 11,
             zoomControl: true,
             zoomControlOptions : {
 		        position : naver.maps.Position.TOP_RIGHT
 	        },
-            mapTypeControl: false,
-            
+            mapTypeControl: true,            
             mapTypes: new naver.maps.MapTypeRegistry({
                 'normal': naver.maps.NaverStyleMapTypeOption.getNormalMap({
-                    //overlayType: 'bg.sw'
-                })
+                    //overlayType: 'bg.sw.ts.ol'
+                }),
             }),
+
         });
-        
+        map.mapTypes.set(naver.maps.MapTypeId.SATELLITE, naver.maps.NaverStyleMapTypeOption.getSatelliteMap());
+        map.mapTypes.set(naver.maps.MapTypeId.HYBRID, naver.maps.NaverStyleMapTypeOption.getHybridMap());
+        map.setMapTypeId(naver.maps.MapTypeId.NORMAL); // error thrown
+
         naver.maps.Event.addListener(map, 'click', function (e) {
 			var dummy = document.createElement("textarea");
 			document.body.appendChild(dummy);
@@ -87,12 +90,9 @@
             map.setSize(Size);
         }
         var metro=new Array();
-
-
     </script>
-    <div id="dark">
-
-    </div>
+    <button type="button" class="" onclick="map.setOptions({ mapTypeControl : true })">mapTypeControl : true</button>
+    <button type="button" class="" onclick="map.setOptions({ mapTypeControl : false })">mapTypeControl : false</button>
     <script src="./TrainLine_Seoul.js"></script>
     <script src="./TrainLine_Busan.js"></script>
     <script src="./Apartment.js"></script>
