@@ -1,12 +1,604 @@
-var metro = new naver.maps.Polyline({ // 수도권 1호선
+var metro = new naver.maps.Polyline({ // 수도권 1호선(경원경부)
     map: map,
     path: [
-        new naver.maps.LatLng(),
-        new naver.maps.LatLng(),
+        new naver.maps.LatLng(38.1017721, 127.0739328), //연천
+        new naver.maps.LatLng(38.0891379, 127.071635),
+        new naver.maps.LatLng(38.0883611, 127.0716028),
+        new naver.maps.LatLng(38.0869171, 127.0718174),
+        new naver.maps.LatLng(38.0774841, 127.0737915),
+        new naver.maps.LatLng(38.076479, 127.0738344),
+        new naver.maps.LatLng(38.0759132, 127.0737486),
+        new naver.maps.LatLng(38.0748575, 127.0733731),
+        new naver.maps.LatLng(38.0718254, 127.0714526),
+        new naver.maps.LatLng(38.0697476, 127.0703476),
+        new naver.maps.LatLng(38.0680329, 127.0696287),
+        new naver.maps.LatLng(38.0478682, 127.0655518),
+        new naver.maps.LatLng(38.0460263, 127.0653801),
+        new naver.maps.LatLng(38.044573, 127.0654338),
+        new naver.maps.LatLng(38.0312134, 127.0685559),
+        new naver.maps.LatLng(38.028981, 127.0693838),
+        new naver.maps.LatLng(38.0244342, 127.0717039), //전곡
+        new naver.maps.LatLng(38.0242102, 127.0719667), //경원선
+        new naver.maps.LatLng(38.0228199, 127.0728036),
+        new naver.maps.LatLng(38.0196969, 127.0744505),
+        new naver.maps.LatLng(38.018839, 127.0747348),
+        new naver.maps.LatLng(38.0181628, 127.0748367),
+        new naver.maps.LatLng(38.0176725, 127.0748903),
+        new naver.maps.LatLng(38.0097734, 127.0744987),
+        new naver.maps.LatLng(38.0087336, 127.0745095),
+        new naver.maps.LatLng(38.0072373, 127.0746811),
+        new naver.maps.LatLng(38.0061383, 127.0748957),
+        new naver.maps.LatLng(38.0027314, 127.0757004),
+        new naver.maps.LatLng(38.001979, 127.0758184),
+        new naver.maps.LatLng(37.9982759, 127.0755716),
+        new naver.maps.LatLng(37.9971853, 127.0754107),
+        new naver.maps.LatLng(37.9960523, 127.0749923),
+        new naver.maps.LatLng(37.9948771, 127.0742091),
+        new naver.maps.LatLng(37.9937864, 127.0729967),
+        new naver.maps.LatLng(37.9881212, 127.0648428),
+        new naver.maps.LatLng(37.9866499, 127.063212),
+        new naver.maps.LatLng(37.9854491, 127.0620747),
+        new naver.maps.LatLng(37.9841046, 127.0610662),
+        new naver.maps.LatLng(37.9824049, 127.0600041),
+        new naver.maps.LatLng(37.9809081, 127.0592745),
+        new naver.maps.LatLng(37.9788277, 127.0586522),
+        new naver.maps.LatLng(37.9774746, 127.0583733),
+        new naver.maps.LatLng(37.9762821, 127.058266),
+        new naver.maps.LatLng(37.9749628, 127.0582445),
+        new naver.maps.LatLng(37.9736604, 127.0583626),
+        new naver.maps.LatLng(37.9676553, 127.059414),
+        new naver.maps.LatLng(37.966192, 127.0598002),
+        new naver.maps.LatLng(37.9650079, 127.0602616),
+        new naver.maps.LatLng(37.961709, 127.0615919),
+        new naver.maps.LatLng(37.9608039, 127.0618923),
+        new naver.maps.LatLng(37.9598819, 127.0620747),
+        new naver.maps.LatLng(37.9591205, 127.0621606),
+        new naver.maps.LatLng(37.9583846, 127.0621713),
+        new naver.maps.LatLng(37.9571834, 127.0621069),
+        new naver.maps.LatLng(37.9499714, 127.0612137), //소요산
+        new naver.maps.LatLng(37.9470526, 127.0608114),
+        new naver.maps.LatLng(37.9464772, 127.0606612),
+        new naver.maps.LatLng(37.9459569, 127.060452),
+        new naver.maps.LatLng(37.9453943, 127.060114),
+        new naver.maps.LatLng(37.9446159, 127.0595347),
+        new naver.maps.LatLng(37.9428222, 127.0578878),
+        new naver.maps.LatLng(37.9408423, 127.0561658),
+        new naver.maps.LatLng(37.9398608, 127.055565),
+        new naver.maps.LatLng(37.9363492, 127.0539664),
+        new naver.maps.LatLng(37.9357188, 127.0537465),
+        new naver.maps.LatLng(37.934898, 127.0536124),
+        new naver.maps.LatLng(37.9341576, 127.0536285),
+        new naver.maps.LatLng(37.928509, 127.0546906), //동두천
+        new naver.maps.LatLng(37.920706, 127.0561068),
+        new naver.maps.LatLng(37.9151198, 127.057008),
+        new naver.maps.LatLng(37.912936, 127.0573085),
+        new naver.maps.LatLng(37.9122165, 127.0573085),
+        new naver.maps.LatLng(37.9045896, 127.0567076),
+        new naver.maps.LatLng(37.9026425, 127.0564931), //동두천중앙
+        new naver.maps.LatLng(37.8932789, 127.0558279), //지행
+        new naver.maps.LatLng(37.8816616, 127.0550339),
+        new naver.maps.LatLng(37.8807471, 127.0550983),
+        new naver.maps.LatLng(37.879172, 127.0556133),
+        new naver.maps.LatLng(37.8782743, 127.0561712),
+        new naver.maps.LatLng(37.875937, 127.0579522),
+        new naver.maps.LatLng(37.8750732, 127.0585101),
+        new naver.maps.LatLng(37.8740061, 127.0590894),
+        new naver.maps.LatLng(37.8728882, 127.0594971),
+        new naver.maps.LatLng(37.8687382, 127.0610206),
+        new naver.maps.LatLng(37.8681453, 127.0611708),
+        new naver.maps.LatLng(37.8673492, 127.0612567),
+        new naver.maps.LatLng(37.8656722, 127.0611923),
+        new naver.maps.LatLng(37.8528646, 127.0606344),
+        new naver.maps.LatLng(37.8505264, 127.0607202),
+        new naver.maps.LatLng(37.8431822, 127.0615547), //덕정역
+        new naver.maps.LatLng(37.8345058, 127.0624988),
+        new naver.maps.LatLng(37.8314892, 127.0629709),
+        new naver.maps.LatLng(37.8296249, 127.0626705),
+        new naver.maps.LatLng(37.8277606, 127.0619838),
+        new naver.maps.LatLng(37.8254556, 127.0600956),
+        new naver.maps.LatLng(37.823659, 127.0587223),
+        new naver.maps.LatLng(37.8187774, 127.0567482), //덕계역
+        new naver.maps.LatLng(37.8167772, 127.0558899),
+        new naver.maps.LatLng(37.8145057, 127.0542591),
+        new naver.maps.LatLng(37.8114883, 127.0512121),
+        new naver.maps.LatLng(37.8096913, 127.0503109),
+        new naver.maps.LatLng(37.8080299, 127.0501821),
+        new naver.maps.LatLng(37.8056565, 127.0506971),
+        new naver.maps.LatLng(37.803995, 127.05074),
+        new naver.maps.LatLng(37.799892, 127.0494955),
+        new naver.maps.LatLng(37.7979252, 127.0491092),
+        new naver.maps.LatLng(37.7969757, 127.049238),
+        new naver.maps.LatLng(37.7904645, 127.0510833),
+        new naver.maps.LatLng(37.7891418, 127.0510833),
+        new naver.maps.LatLng(37.7855807, 127.0505254),
+        new naver.maps.LatLng(37.7841223, 127.049753),
+        new naver.maps.LatLng(37.780493, 127.0459764),
+        new naver.maps.LatLng(37.7793398, 127.0453327),
+        new naver.maps.LatLng(37.7781526, 127.0450323),
+        new naver.maps.LatLng(37.7672296, 127.0442598),
+        new naver.maps.LatLng(37.7611908, 127.0424144),
+        new naver.maps.LatLng(37.7594265, 127.0422857), //녹양역
+        new naver.maps.LatLng(37.754846, 127.0421999),
+        new naver.maps.LatLng(37.7522673, 127.0427148),
+        new naver.maps.LatLng(37.7470077, 127.0447748), //가능역
+        new naver.maps.LatLng(37.7435803, 127.0453756),
+        new naver.maps.LatLng(37.7277306, 127.0473926),
+        new naver.maps.LatLng(37.7257958, 127.0474355),
+        new naver.maps.LatLng(37.7247436, 127.0474355),
+        new naver.maps.LatLng(37.7176489, 127.0464056),
+        new naver.maps.LatLng(37.7157817, 127.0463197),
+        new naver.maps.LatLng(37.7090936, 127.0476501),
+        new naver.maps.LatLng(37.707396, 127.0477359),
+        new naver.maps.LatLng(37.6975832, 127.0457618),
+        new naver.maps.LatLng(37.6959193, 127.0456331),
+        new naver.maps.LatLng(37.6857653, 127.0464056),
+        new naver.maps.LatLng(37.6790744, 127.0454614), //도봉역
+        new naver.maps.LatLng(37.671296, 127.0442598),
+        new naver.maps.LatLng(37.6669479, 127.0444315),
+        new naver.maps.LatLng(37.6604931, 127.0449035),
+        new naver.maps.LatLng(37.659304, 127.0452039),
+        new naver.maps.LatLng(37.6425528, 127.0523279),
+        new naver.maps.LatLng(37.6400381, 127.0543449),
+        new naver.maps.LatLng(37.6381011, 127.0567482),
+        new naver.maps.LatLng(37.6359601, 127.0583789),
+        new naver.maps.LatLng(37.6346686, 127.058851),
+        new naver.maps.LatLng(37.6317118, 127.058851),
+        new naver.maps.LatLng(37.6301824, 127.0590656),
+        new naver.maps.LatLng(37.6146824, 127.0658033), //석계역
+        new naver.maps.LatLng(37.6115209, 127.0673053),
+        new naver.maps.LatLng(37.610297, 127.0676057),
+        new naver.maps.LatLng(37.6039733, 127.0678203),
+        new naver.maps.LatLng(37.6017633, 127.0673912),
+        new naver.maps.LatLng(37.6007433, 127.0668333),
+        new naver.maps.LatLng(37.5914605, 127.0605247),
+        new naver.maps.LatLng(37.5894201, 127.0573061),
+        new naver.maps.LatLng(37.5877538, 127.0543449),
+        new naver.maps.LatLng(37.5867676, 127.0530574),
+        new naver.maps.LatLng(37.5835443, 127.0502596),
+        new naver.maps.LatLng(37.5813592, 127.047513),
+        new naver.maps.LatLng(37.580679, 127.0462363),
+        new naver.maps.LatLng(37.5798127, 127.0441525), // 청량리역
+        new naver.maps.LatLng(37.5781632, 127.0384233),
+        new naver.maps.LatLng(37.5781292, 127.0325868),
+        new naver.maps.LatLng(37.5779931, 127.031471),
+        new naver.maps.LatLng(37.5757143, 127.0235746),
+        new naver.maps.LatLng(37.5739117, 127.018811),
+        new naver.maps.LatLng(37.572279, 127.0133178),
+        new naver.maps.LatLng(37.5711225, 127.008168),
+        new naver.maps.LatLng(37.5709524, 127.0019024),
+        new naver.maps.LatLng(37.5705102, 126.9953363),
+        new naver.maps.LatLng(37.5703742, 126.9905298),
+        new naver.maps.LatLng(37.5701701, 126.9876974),
+        new naver.maps.LatLng(37.5702041, 126.977741),
+        new naver.maps.LatLng(37.5695578, 126.9770544),
+        new naver.maps.LatLng(37.5643193, 126.9768827), // 시청역
+        new naver.maps.LatLng(37.5603051, 126.9754236),
+        new naver.maps.LatLng(37.5573453, 126.9728057),
+        new naver.maps.LatLng(37.5557804, 126.9722049),
+        new naver.maps.LatLng(37.5526163, 126.9719045),
+        new naver.maps.LatLng(37.5496222, 126.9712608),
+        new naver.maps.LatLng(37.5405712, 126.9713466), // 남영역
+        new naver.maps.LatLng(37.535773, 126.9709604),
+        new naver.maps.LatLng(37.5331866, 126.9692438),
+        new naver.maps.LatLng(37.5287528, 126.9631522), //용산
+        new naver.maps.LatLng(37.5253664, 126.9584959),
+        new naver.maps.LatLng(37.5158358, 126.9481318),
+        new naver.maps.LatLng(37.5156316, 126.9478314),
+        new naver.maps.LatLng(37.5149508, 126.9466512),
+        new naver.maps.LatLng(37.5146614, 126.9458788),
+        new naver.maps.LatLng(37.5139806, 126.9403856), //노량진
+        new naver.maps.LatLng(37.5138274, 126.9390767),
+        new naver.maps.LatLng(37.513487, 126.9276183),
+        new naver.maps.LatLng(37.513453, 126.9253009), //대방
+        new naver.maps.LatLng(37.51347, 126.9247537),
+        new naver.maps.LatLng(37.5136232, 126.9240349),
+        new naver.maps.LatLng(37.5138019, 126.9234984),
+        new naver.maps.LatLng(37.5141849, 126.9227903),
+        new naver.maps.LatLng(37.5154954, 126.9211166),
+        new naver.maps.LatLng(37.5159464, 126.9204943),
+        new naver.maps.LatLng(37.5162868, 126.9199901),
+        new naver.maps.LatLng(37.5166783, 126.9191425),
+        new naver.maps.LatLng(37.5169932, 126.9181662),
+        new naver.maps.LatLng(37.5171634, 126.9170718), //신길
+        new naver.maps.LatLng(37.5171889, 126.916235),
+        new naver.maps.LatLng(37.5168996, 126.9115787),
+        new naver.maps.LatLng(37.51684, 126.9108706),
+        new naver.maps.LatLng(37.5167379, 126.9102483),
+        new naver.maps.LatLng(37.5164485, 126.9092505),
+        new naver.maps.LatLng(37.5154444, 126.9066005), //영등포
+        new naver.maps.LatLng(37.5094531, 126.8925779),
+        new naver.maps.LatLng(37.5085509, 126.8905823), //신도림
+        new naver.maps.LatLng(37.5083041, 126.8900566),
+        new naver.maps.LatLng(37.5045933, 126.8839197),
+        new naver.maps.LatLng(37.5023548, 126.8815379), //구로
+        new naver.maps.LatLng(37.5007461, 126.8798213), //구로분기
+        new naver.maps.LatLng(37.4996907, 126.8787216),
+        new naver.maps.LatLng(37.4995332, 126.8785875),
+        new naver.maps.LatLng(37.4993672, 126.8785017),
+        new naver.maps.LatLng(37.4991885, 126.8784427),
+        new naver.maps.LatLng(37.4989927, 126.8784158),
+        new naver.maps.LatLng(37.4987714, 126.8784158),
+        new naver.maps.LatLng(37.4985544, 126.8784641),
+        new naver.maps.LatLng(37.4964221, 126.8792151),
+        new naver.maps.LatLng(37.4876328, 126.8799125),
+        new naver.maps.LatLng(37.4873901, 126.8799715),
+        new naver.maps.LatLng(37.4871603, 126.8800627),
+        new naver.maps.LatLng(37.486956, 126.8802022),
+        new naver.maps.LatLng(37.486409, 126.8803953),
+        new naver.maps.LatLng(37.4855598, 126.8808164),
+        new naver.maps.LatLng(37.485198, 126.8810095),
+        new naver.maps.LatLng(37.4805303, 126.8830668), //가디단
+        new naver.maps.LatLng(37.4650652, 126.8898635), //독산
+        new naver.maps.LatLng(37.4546582, 126.894434), //금천구청
+        new naver.maps.LatLng(37.445979, 126.8982105), //금천구청분기
+        new naver.maps.LatLng(37.4388747, 126.9013648),
+        new naver.maps.LatLng(37.4379973, 126.9016652),
+        new naver.maps.LatLng(37.4340104, 126.9024806), //석수
+        new naver.maps.LatLng(37.4278166, 126.9037037),
+        new naver.maps.LatLng(37.4265471, 126.9042294),
+        new naver.maps.LatLng(37.4219546, 126.9067614),
+        new naver.maps.LatLng(37.4211196, 126.9072979),
+        new naver.maps.LatLng(37.4187082, 126.9092183), //관악
+        new naver.maps.LatLng(37.4005562, 126.9237881), //안양
+        new naver.maps.LatLng(37.400275, 126.9240241),
+        new naver.maps.LatLng(37.39736, 126.926363),
+        new naver.maps.LatLng(37.3944194, 126.9299464),
+        new naver.maps.LatLng(37.3927913, 126.9319313),
+        new naver.maps.LatLng(37.3920156, 126.9325965),
+        new naver.maps.LatLng(37.3908222, 126.9331651),
+        new naver.maps.LatLng(37.3861594, 126.9349246),
+        new naver.maps.LatLng(37.383474, 126.9359331), //명학
+        new naver.maps.LatLng(37.3823913, 126.9363301),
+        new naver.maps.LatLng(37.3814195, 126.9369202),
+        new naver.maps.LatLng(37.3804646, 126.9376712),
+        new naver.maps.LatLng(37.3782651, 126.9399886),
+        new naver.maps.LatLng(37.3777706, 126.9404822),
+        new naver.maps.LatLng(37.3756818, 126.9418447),
+        new naver.maps.LatLng(37.3714272, 126.9437545), //금정
+        new naver.maps.LatLng(37.3621509, 126.9481294),
+        new naver.maps.LatLng(37.3613323, 126.9485586),
+        new naver.maps.LatLng(37.3601384, 126.9485586),
+        new naver.maps.LatLng(37.3433541, 126.9483869),
+        new naver.maps.LatLng(37.3355406, 126.9484298),
+        new naver.maps.LatLng(37.3247573, 126.947829),
+        new naver.maps.LatLng(37.3203207, 126.9480865), //의왕역
+        new naver.maps.LatLng(37.3158838, 126.9484727),
+        new naver.maps.LatLng(37.3083405, 126.9531076),
+        new naver.maps.LatLng(37.3018889, 126.9615619),
+        new naver.maps.LatLng(37.3013768, 126.9626348),
+        new naver.maps.LatLng(37.3002844, 126.9711321),
+        new naver.maps.LatLng(37.2998748, 126.9747799),
+        new naver.maps.LatLng(37.2992261, 126.9765394),
+        new naver.maps.LatLng(37.2980654, 126.9781702),
+        new naver.maps.LatLng(37.2860476, 126.9885557),
+        new naver.maps.LatLng(37.2839989, 126.9895427),
+        new naver.maps.LatLng(37.2646872, 127.0008938), //수원역
+        new naver.maps.LatLng(37.2552335, 127.0063036),
+        new naver.maps.LatLng(37.2528424, 127.008385),
+        new naver.maps.LatLng(37.2523812, 127.0089858),
+        new naver.maps.LatLng(37.2509123, 127.0102089),
+        new naver.maps.LatLng(37.2476841, 127.0118611),
+        new naver.maps.LatLng(37.2434138, 127.0141142), //세류
+        new naver.maps.LatLng(37.2092595, 127.0319026),
+        new naver.maps.LatLng(37.2058842, 127.0337479), //병점
+        new naver.maps.LatLng(37.2036282, 127.0348637), //병점분기
+        new naver.maps.LatLng(37.1880996, 127.042846),
+        new naver.maps.LatLng(37.1873004, 127.0432859),
+        new naver.maps.LatLng(37.1865183, 127.0438223), //세마
+        new naver.maps.LatLng(37.1862918, 127.0439725),
+        new naver.maps.LatLng(37.1848516, 127.0453029),
+        new naver.maps.LatLng(37.1839669, 127.0463597),
+        new naver.maps.LatLng(37.1756453, 127.0591431),
+        new naver.maps.LatLng(37.1752734, 127.0596259),
+        new naver.maps.LatLng(37.1739569, 127.0609187),
+        new naver.maps.LatLng(37.1730721, 127.0616054),
+        new naver.maps.LatLng(37.1710888, 127.0626675),
+        new naver.maps.LatLng(37.1684214, 127.063322), //오산대
+        new naver.maps.LatLng(37.1551473, 127.0665674),
+        new naver.maps.LatLng(37.1543264, 127.0668357),
+        new naver.maps.LatLng(37.1522399, 127.067297),
+        new naver.maps.LatLng(37.1519321, 127.0673506),
+        new naver.maps.LatLng(37.1516071, 127.0673506),
+        new naver.maps.LatLng(37.1501619, 127.067297),
+        new naver.maps.LatLng(37.1436112, 127.0664816), //오산
+        new naver.maps.LatLng(37.1091593, 127.0622866), //진위
+        new naver.maps.LatLng(37.09706, 127.0608382),
+        new naver.maps.LatLng(37.0957507, 127.0605378),
+        new naver.maps.LatLng(37.0931235, 127.0596366),
+        new naver.maps.LatLng(37.0864822, 127.056772),
+        new naver.maps.LatLng(37.0810473, 127.0544117),
+        new naver.maps.LatLng(37.0805679, 127.05424),
+        new naver.maps.LatLng(37.0789074, 127.0539611),
+        new naver.maps.LatLng(37.0764936, 127.0542829),
+        new naver.maps.LatLng(37.0746618, 127.0544546),
+        new naver.maps.LatLng(37.072496, 127.054637),
+        new naver.maps.LatLng(37.0722478, 127.0546155),
+        new naver.maps.LatLng(37.0554764, 127.0527487), //서정리
+        new naver.maps.LatLng(37.0513578, 127.0522444),
+        new naver.maps.LatLng(37.0506129, 127.0522123),
+        new naver.maps.LatLng(37.0499621, 127.0522659),
+        new naver.maps.LatLng(37.049474, 127.0523625),
+        new naver.maps.LatLng(37.0487719, 127.0525985),
+        new naver.maps.LatLng(37.048104, 127.0529204),
+        new naver.maps.LatLng(37.0474275, 127.0533924),
+        new naver.maps.LatLng(37.046477, 127.054358),
+        new naver.maps.LatLng(37.0396218, 127.0651566),
+        new naver.maps.LatLng(37.0391123, 127.0658486),
+        new naver.maps.LatLng(37.0381874, 127.0669859),
+        new naver.maps.LatLng(37.0371254, 127.0678227),
+        new naver.maps.LatLng(37.0361662, 127.0683162),
+        new naver.maps.LatLng(37.0350014, 127.0686596),
+        new naver.maps.LatLng(37.017999, 127.0705693), //지제
+        new naver.maps.LatLng(37.0064764, 127.0718353),
+        new naver.maps.LatLng(37.0051741, 127.0720499),
+        new naver.maps.LatLng(37.0038546, 127.0728653),
+        new naver.maps.LatLng(37.0028607, 127.073745),
+        new naver.maps.LatLng(36.9991763, 127.0772426),
+        new naver.maps.LatLng(36.9887734, 127.0872634), //평택
+        new naver.maps.LatLng(36.9514004, 127.1228187),
+        new naver.maps.LatLng(36.9502686, 127.1236556),
+        new naver.maps.LatLng(36.9491883, 127.124192),
+        new naver.maps.LatLng(36.9481251, 127.1244924),
+        new naver.maps.LatLng(36.9150727, 127.1270673),
+        new naver.maps.LatLng(36.9130825, 127.127239),
+        new naver.maps.LatLng(36.9060824, 127.1275394),
+        new naver.maps.LatLng(36.9052931, 127.1277325),
+        new naver.maps.LatLng(36.9030454, 127.1286123),
+        new naver.maps.LatLng(36.8700249, 127.1441906), //직산
+        new naver.maps.LatLng(36.8650294, 127.1465831),
+        new naver.maps.LatLng(36.8644286, 127.1467977),
+        new naver.maps.LatLng(36.863802, 127.1469693),
+        new naver.maps.LatLng(36.8631324, 127.1470337),
+        new naver.maps.LatLng(36.8558358, 127.1452742),
+        new naver.maps.LatLng(36.8550804, 127.1451991),
+        new naver.maps.LatLng(36.8542992, 127.1452205),
+        new naver.maps.LatLng(36.837763, 127.1486108),
+        new naver.maps.LatLng(36.8327911, 127.1489971), //두정
+        new naver.maps.LatLng(36.832379, 127.14904),
+        new naver.maps.LatLng(36.8285962, 127.1492707),
+        new naver.maps.LatLng(36.8265437, 127.1492385),
+        new naver.maps.LatLng(36.8177835, 127.1483051),
+        new naver.maps.LatLng(36.8166154, 127.1480583),
+        new naver.maps.LatLng(36.8126987, 127.1469318),
+        new naver.maps.LatLng(36.8088677, 127.1461593), //천안
+        new naver.maps.LatLng(36.8082019, 127.1461754),
+        new naver.maps.LatLng(36.8076522, 127.1461271),
+        new naver.maps.LatLng(36.8067889, 127.1459716),
+        new naver.maps.LatLng(36.8061102, 127.1456872),
+        new naver.maps.LatLng(36.8056034, 127.1452903),
+        new naver.maps.LatLng(36.8052899, 127.144845),
+        new naver.maps.LatLng(36.8025323, 127.1382092),
+        new naver.maps.LatLng(36.8022317, 127.1375387),
+        new naver.maps.LatLng(36.8008829, 127.1350711), //봉명
+        new naver.maps.LatLng(36.8002515, 127.1337353),
+        new naver.maps.LatLng(36.8001398, 127.1334081),
+        new naver.maps.LatLng(36.7998993, 127.1324049),
+        new naver.maps.LatLng(36.7996201, 127.1314984),
+        new naver.maps.LatLng(36.7993752, 127.1307473),
+        new naver.maps.LatLng(36.7988125, 127.1293204),
+        new naver.maps.LatLng(36.7984173, 127.1286659),
+        new naver.maps.LatLng(36.796132, 127.1257477),
+        new naver.maps.LatLng(36.7933828, 127.1206193), //쌍용
+        new naver.maps.LatLng(36.792863, 127.1196054),
+        new naver.maps.LatLng(36.7926353, 127.1188115),
+        new naver.maps.LatLng(36.7925193, 127.1178191),
+        new naver.maps.LatLng(36.7924978, 127.1166657),
+        new naver.maps.LatLng(36.7927685, 127.1122186),
+        new naver.maps.LatLng(36.7928028, 127.1093058),
+        new naver.maps.LatLng(36.7927384, 127.1083563),
+        new naver.maps.LatLng(36.7926052, 127.1074282),
+        new naver.maps.LatLng(36.7919522, 127.1035712), //아산
+        new naver.maps.LatLng(36.7897742, 127.0906),
+        new naver.maps.LatLng(36.7892501, 127.0881324),
+        new naver.maps.LatLng(36.7886057, 127.085654),
+        new naver.maps.LatLng(36.7883028, 127.0847381), //탕정
+        new naver.maps.LatLng(36.7818702, 127.0636264),
+        new naver.maps.LatLng(36.7811097, 127.0614002),
+        new naver.maps.LatLng(36.7771482, 127.051771), //배방
+        new naver.maps.LatLng(36.7763791, 127.0498613),
+        new naver.maps.LatLng(36.774974, 127.0460472),
+        new naver.maps.LatLng(36.7741705, 127.0441965),
+        new naver.maps.LatLng(36.7725462, 127.0402268),
+        new naver.maps.LatLng(36.7713431, 127.0370886),
+        new naver.maps.LatLng(36.7710895, 127.0362464),
+        new naver.maps.LatLng(36.770879, 127.0350448),
+        new naver.maps.LatLng(36.770793, 127.0340792),
+        new naver.maps.LatLng(36.7708145, 127.0331297),
+        new naver.maps.LatLng(36.7709778, 127.0319602),
+        new naver.maps.LatLng(36.7711701, 127.0310389),
+        new naver.maps.LatLng(36.7716299, 127.0297193),
+        new naver.maps.LatLng(36.777869, 127.0169493),
+        new naver.maps.LatLng(36.778406, 127.0158227),
+        new naver.maps.LatLng(36.7786724, 127.0151951),
+        new naver.maps.LatLng(36.7788873, 127.0146104),
+        new naver.maps.LatLng(36.7790248, 127.0141007),
+        new naver.maps.LatLng(36.779158, 127.0134302),
+        new naver.maps.LatLng(36.7795489, 127.0100506),
+        new naver.maps.LatLng(36.7796306, 127.0089026),
+        new naver.maps.LatLng(36.7807391, 127.0020094), //온양온천
+        new naver.maps.LatLng(36.7810957, 126.999995),
+        new naver.maps.LatLng(36.7812074, 126.9994908),
+        new naver.maps.LatLng(36.7813836, 126.9989758),
+        new naver.maps.LatLng(36.7828616, 126.9955908),
+        new naver.maps.LatLng(36.7830979, 126.9947754),
+        new naver.maps.LatLng(36.783317, 126.9934182),
+        new naver.maps.LatLng(36.7835318, 126.9871043),
+        new naver.maps.LatLng(36.7835103, 126.9861387),
+        new naver.maps.LatLng(36.7833728, 126.9846528),
+        new naver.maps.LatLng(36.7831537, 126.9833653),
+        new naver.maps.LatLng(36.7827928, 126.9820618),
+        new naver.maps.LatLng(36.7824147, 126.9810747),
+        new naver.maps.LatLng(36.773469, 126.9619237),
+        new naver.maps.LatLng(36.7721241, 126.9586622),
+        new naver.maps.LatLng(36.7693739, 126.9505994), //신창
     ],
     strokeColor: '#0052a4',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 수도권 1호선(경인)
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.5007461, 126.8798213), //구로분기
+        new naver.maps.LatLng(37.5003051, 126.8791661),
+        new naver.maps.LatLng(37.4999518, 126.8784527),
+        new naver.maps.LatLng(37.4984835, 126.8745206),
+        new naver.maps.LatLng(37.4957554, 126.8684641),//구일
+        new naver.maps.LatLng(37.4942019, 126.8650577),
+        new naver.maps.LatLng(37.4940274, 126.8645052),
+        new naver.maps.LatLng(37.493921, 126.8639795),
+        new naver.maps.LatLng(37.4938614, 126.863325),
+        new naver.maps.LatLng(37.4938827, 126.8626437),
+        new naver.maps.LatLng(37.4939295, 126.8623326),
+        new naver.maps.LatLng(37.4947935, 126.8578909),//개봉
+        new naver.maps.LatLng(37.4957512, 126.8530414),
+        new naver.maps.LatLng(37.495832, 126.8523709),
+        new naver.maps.LatLng(37.4958405, 126.8516574),
+        new naver.maps.LatLng(37.4957937, 126.8510888),
+        new naver.maps.LatLng(37.4957129, 126.8505899),
+        new naver.maps.LatLng(37.4941466, 126.8434981),//오류동
+        new naver.maps.LatLng(37.4932528, 126.8394909),
+        new naver.maps.LatLng(37.4931762, 126.8390296),
+        new naver.maps.LatLng(37.4931123, 126.8384395),
+        new naver.maps.LatLng(37.4930953, 126.8380747),
+        new naver.maps.LatLng(37.4930059, 126.8263749),
+        new naver.maps.LatLng(37.4929761, 126.8259618),
+        new naver.maps.LatLng(37.4928953, 126.8256453),
+        new naver.maps.LatLng(37.4927846, 126.8252108),//온수
+        new naver.maps.LatLng(37.4920227, 126.8225769),
+        new naver.maps.LatLng(37.4918099, 126.8220297),
+        new naver.maps.LatLng(37.4916609, 126.8217722),
+        new naver.maps.LatLng(37.4915375, 126.8216113),
+        new naver.maps.LatLng(37.486983, 126.8160162),
+        new naver.maps.LatLng(37.4866212, 126.8154529),
+        new naver.maps.LatLng(37.4860934, 126.8143908),
+        new naver.maps.LatLng(37.4857018, 126.8132267),//역곡
+        new naver.maps.LatLng(37.4825986, 126.8039087),
+        new naver.maps.LatLng(37.4824496, 126.8032274),
+        new naver.maps.LatLng(37.4824241, 126.8028895),
+        new naver.maps.LatLng(37.4824326, 126.8022565),
+        new naver.maps.LatLng(37.4824751, 126.8017629),
+        new naver.maps.LatLng(37.4828114, 126.7984692),
+        new naver.maps.LatLng(37.4828157, 126.7979488),
+        new naver.maps.LatLng(37.4828029, 126.796935),//소사
+        new naver.maps.LatLng(37.4827263, 126.7932979),
+        new naver.maps.LatLng(37.4827348, 126.7922036),
+        new naver.maps.LatLng(37.4828795, 126.7906532),
+        new naver.maps.LatLng(37.4838586, 126.78435),//부천
+        new naver.maps.LatLng(37.4843269, 126.7811314),
+        new naver.maps.LatLng(37.4856209, 126.7712931),
+        new naver.maps.LatLng(37.4865489, 126.76536),//중동
+        new naver.maps.LatLng(37.486966, 126.7626134),
+        new naver.maps.LatLng(37.4870426, 126.7617122),
+        new naver.maps.LatLng(37.487613, 126.7539231),//송내
+        new naver.maps.LatLng(37.4883962, 126.7420731),//부개
+        new naver.maps.LatLng(37.4894008, 126.7258189),//부평
+        new naver.maps.LatLng(37.4898094, 126.7192099),
+        new naver.maps.LatLng(37.4897583, 126.7181853),
+        new naver.maps.LatLng(37.4896349, 126.7175255),
+        new naver.maps.LatLng(37.4893199, 126.7166618),
+        new naver.maps.LatLng(37.4890986, 126.7162327),
+        new naver.maps.LatLng(37.483782, 126.7079178),//백운
+        new naver.maps.LatLng(37.4831775, 126.7070059),
+        new naver.maps.LatLng(37.4824539, 126.7060832),
+        new naver.maps.LatLng(37.4810661, 126.7046563),
+        new naver.maps.LatLng(37.4804957, 126.7041091),
+        new naver.maps.LatLng(37.4798912, 126.7037336),
+        new naver.maps.LatLng(37.479474, 126.7035726),
+        new naver.maps.LatLng(37.4790057, 126.7034546),
+        new naver.maps.LatLng(37.4716917, 126.7029396),//동암
+        new naver.maps.LatLng(37.4683878, 126.7027572),
+        new naver.maps.LatLng(37.4670424, 126.7024032),
+        new naver.maps.LatLng(37.466276, 126.701856),
+        new naver.maps.LatLng(37.4656628, 126.7010084),
+        new naver.maps.LatLng(37.4654074, 126.7004291),
+        new naver.maps.LatLng(37.4650242, 126.6992596),
+        new naver.maps.LatLng(37.4648964, 126.6987125),
+        new naver.maps.LatLng(37.4647687, 126.6947106),//간석
+        new naver.maps.LatLng(37.464658, 126.6922323),
+        new naver.maps.LatLng(37.4644281, 126.6877905),
+        new naver.maps.LatLng(37.4644366, 126.6866318),
+        new naver.maps.LatLng(37.4644706, 126.6860954),
+        new naver.maps.LatLng(37.4649646, 126.6809214),//주안
+        new naver.maps.LatLng(37.4660205, 126.6698921),//도화
+        new naver.maps.LatLng(37.4668295, 126.6610033),
+        new naver.maps.LatLng(37.4668465, 126.6601986),
+        new naver.maps.LatLng(37.4668295, 126.6589434),//제물포역
+        new naver.maps.LatLng(37.4668124, 126.6551936),
+        new naver.maps.LatLng(37.4667869, 126.6538579),
+        new naver.maps.LatLng(37.4668039, 126.6487832),
+        new naver.maps.LatLng(37.4668848, 126.6478068),
+        new naver.maps.LatLng(37.4675278, 126.6450763),
+        new naver.maps.LatLng(37.4676725, 126.644733),
+        new naver.maps.LatLng(37.468226, 126.6435958),//도원
+        new naver.maps.LatLng(37.471151, 126.6377056),
+        new naver.maps.LatLng(37.4719727, 126.6364879),
+        new naver.maps.LatLng(37.4749188, 126.6331995),//동인천
+        new naver.maps.LatLng(37.4779287, 126.6298253),
+        new naver.maps.LatLng(37.4784608, 126.6291762),
+        new naver.maps.LatLng(37.4804786, 126.626038),
+        new naver.maps.LatLng(37.4808788, 126.6253085),
+        new naver.maps.LatLng(37.4811172, 126.6246111),
+        new naver.maps.LatLng(37.4812151, 126.624139),
+        new naver.maps.LatLng(37.4812875, 126.6234631),
+        new naver.maps.LatLng(37.4812704, 126.6229213),
+        new naver.maps.LatLng(37.4812406, 126.6226638),
+        new naver.maps.LatLng(37.4810193, 126.6215963),
+        new naver.maps.LatLng(37.4804063, 126.61959),
+        new naver.maps.LatLng(37.4802743, 126.6193003),
+        new naver.maps.LatLng(37.480087, 126.6189892),
+        new naver.maps.LatLng(37.479938, 126.61878),
+        new naver.maps.LatLng(37.4789887, 126.6177822),
+        new naver.maps.LatLng(37.4785992, 126.617514),
+        new naver.maps.LatLng(37.4781415, 126.6172833),
+        new naver.maps.LatLng(37.4769559, 126.6170473),
+        new naver.maps.LatLng(37.4755574, 126.6168246),//인천
+    ],
+    strokeColor: '#0052a4',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 수도권 1호선 경부고속선
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.445979, 126.8982105), //금천구청분기
+        new naver.maps.LatLng(37.4445906, 126.8984573),
+        new naver.maps.LatLng(37.4432277, 126.8985002),
+        new naver.maps.LatLng(37.4420181, 126.89835),
+        new naver.maps.LatLng(37.4408596, 126.8979852),
+        new naver.maps.LatLng(37.4151293, 126.8840163), //광명
+    ],
+    strokeColor: '#0052a4',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 수도권 1호선 병점기지선
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.2036282, 127.0348637), //병점분기
+        new naver.maps.LatLng(37.2023037, 127.0357328),
+        new naver.maps.LatLng(37.201714, 127.0361941),
+        new naver.maps.LatLng(37.2013893, 127.0366125),
+        new naver.maps.LatLng(37.2008082, 127.0375245),
+        new naver.maps.LatLng(37.2004578, 127.0383506),
+        new naver.maps.LatLng(37.2001929, 127.0392518),
+        new naver.maps.LatLng(37.1995861, 127.042213),
+        new naver.maps.LatLng(37.1992229, 127.0434951),
+        new naver.maps.LatLng(37.1990947, 127.0438438),
+        new naver.maps.LatLng(37.1989836, 127.0440476),
+        new naver.maps.LatLng(37.1987529, 127.0444607),
+        new naver.maps.LatLng(37.1986076, 127.0449113),
+        new naver.maps.LatLng(37.1984068, 127.0460378),
+        new naver.maps.LatLng(37.1982914, 127.0464884),
+        new naver.maps.LatLng(37.1981974, 127.0467781),
+        new naver.maps.LatLng(37.1970223, 127.049058),
+        new naver.maps.LatLng(37.1966933, 127.0498948),
+        new naver.maps.LatLng(37.1964583, 127.0504098),
+        new naver.maps.LatLng(37.1952105, 127.0528667), //서동탄
+    ],
+    strokeColor: '#0052a4',
+    strokeOpacity: 1,
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 수도권 2호선
     map: map,
@@ -16,7 +608,7 @@ var metro = new naver.maps.Polyline({ // 수도권 2호선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 수도권 3호선
     map: map,
@@ -26,7 +618,7 @@ var metro = new naver.maps.Polyline({ // 수도권 3호선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 수도권 4호선
     map: map,
@@ -36,7 +628,7 @@ var metro = new naver.maps.Polyline({ // 수도권 4호선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 수도권 5호선
     map: map,
@@ -46,7 +638,7 @@ var metro = new naver.maps.Polyline({ // 수도권 5호선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 수도권 6호선
     map: map,
@@ -56,7 +648,7 @@ var metro = new naver.maps.Polyline({ // 수도권 6호선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 수도권 7호선
     map: map,
@@ -64,47 +656,125 @@ var metro = new naver.maps.Polyline({ // 수도권 7호선
         new naver.maps.LatLng(),
         new naver.maps.LatLng(),
     ],
-    strokeColor: '#ab087d',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeColor: '#747f00',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+var Seoul_7_west = new naver.maps.Polyline({ // 수도권 7호선 석남,청라연장
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.5075142, 126.7200655),//부평구청
+        new naver.maps.LatLng(37.5086121, 126.7035592),//산곡
+        new naver.maps.LatLng(37.509327, 126.6955877),
+        new naver.maps.LatLng(37.509295, 126.6947911),
+        new naver.maps.LatLng(37.5092078, 126.6941018),
+        new naver.maps.LatLng(37.5088567, 126.6926587),
+        new naver.maps.LatLng(37.5069758, 126.6864521),
+        new naver.maps.LatLng(37.506729, 126.6855241),
+        new naver.maps.LatLng(37.5064141, 126.6840944),
+        new naver.maps.LatLng(37.5062886, 126.683389),
+        new naver.maps.LatLng(37.5061588, 126.682469),
+        new naver.maps.LatLng(37.5061056, 126.6820077),
+        new naver.maps.LatLng(37.5060609, 126.6810528),
+        new naver.maps.LatLng(37.5062609, 126.6762195),//석남
+        new naver.maps.LatLng(37.5065099, 126.668948),
+        new naver.maps.LatLng(37.5065524, 126.6681997),
+        new naver.maps.LatLng(37.5066716, 126.6679207),
+        new naver.maps.LatLng(37.5068503, 126.6675023),
+        new naver.maps.LatLng(37.5074546, 126.6671053),
+        new naver.maps.LatLng(37.5080503, 126.6668049),
+        new naver.maps.LatLng(37.5084759, 126.6667835),
+        new naver.maps.LatLng(37.5089099, 126.6671375),
+        new naver.maps.LatLng(37.509378, 126.6676954),
+        new naver.maps.LatLng(37.5096759, 126.6680387),
+        new naver.maps.LatLng(37.5101099, 126.6683043),
+        new naver.maps.LatLng(37.5249254, 126.669294),
+        new naver.maps.LatLng(37.5309495, 126.6694871),
+        new naver.maps.LatLng(37.5311877, 126.6694442),
+        new naver.maps.LatLng(37.5317918, 126.6693262),
+        new naver.maps.LatLng(37.5320896, 126.6692082),
+        new naver.maps.LatLng(37.5324044, 126.6688327),
+        new naver.maps.LatLng(37.5327447, 126.6679851),
+        new naver.maps.LatLng(37.5329404, 126.6672984),
+        new naver.maps.LatLng(37.5329744, 126.6385023),
+        new naver.maps.LatLng(37.5332127, 126.6367105),
+        new naver.maps.LatLng(37.5335019, 126.63523),
+        new naver.maps.LatLng(37.5336976, 126.6346721),
+        new naver.maps.LatLng(37.5336721, 126.6334919),
+        new naver.maps.LatLng(37.5335104, 126.632934),
+        new naver.maps.LatLng(37.5331871, 126.6316573),
+        new naver.maps.LatLng(37.5329404, 126.6308848),
+        new naver.maps.LatLng(37.5329234, 126.6235623),
+        new naver.maps.LatLng(37.5329404, 126.6209445),
+        new naver.maps.LatLng(37.533051, 126.6201506),
+        new naver.maps.LatLng(37.5332637, 126.6195927),
+        new naver.maps.LatLng(37.5335019, 126.6192279),
+        new naver.maps.LatLng(37.5338763, 126.618788),
+        new naver.maps.LatLng(37.5345229, 126.6186807),
+        new naver.maps.LatLng(37.5355693, 126.6186378),
+        new naver.maps.LatLng(37.5364626, 126.6186915),
+        new naver.maps.LatLng(37.537994, 126.6190401),
+        new naver.maps.LatLng(37.5417882, 126.6203276),
+        new naver.maps.LatLng(37.5454291, 126.6213576),
+        new naver.maps.LatLng(37.5550367, 126.6230366),
+        new naver.maps.LatLng(37.5554024, 126.6232888),
+        new naver.maps.LatLng(37.5556618, 126.6236214),
+        new naver.maps.LatLng(37.5560275, 126.6241363),
+        new naver.maps.LatLng(37.5562359, 126.6247318),
+        new naver.maps.LatLng(37.5577711, 126.631668),//청라
+    ],
+    strokeColor: '#747f00',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+//Seoul_7_west.setMap(null); // 폴리라인을 지움
+var metro = new naver.maps.Polyline({ // 수도권 7호선 도봉산포천선
+    map: map,
+    path: [
+        new naver.maps.LatLng(),
+        new naver.maps.LatLng(),
+    ],
+    strokeColor: '#747f00',
+    strokeOpacity: 1,
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 수도권 8호선
     map: map,
     path: [
-        new naver.maps.LatLng(37.5501453, 127.1275263),//암사
-        new naver.maps.LatLng(37.538623, 127.12341),//천호
-        new naver.maps.LatLng(37.5306767, 127.1206312),//강동구청
+        new naver.maps.LatLng(37.5501453, 127.1275263), //암사
+        new naver.maps.LatLng(37.538623, 127.12341), //천호
+        new naver.maps.LatLng(37.5306767, 127.1206312), //강동구청
         new naver.maps.LatLng(37.5180579, 127.1131318),
-        new naver.maps.LatLng(37.5176664, 127.1128206),//몽촌토성
+        new naver.maps.LatLng(37.5176664, 127.1128206), //몽촌토성
         new naver.maps.LatLng(37.5174026, 127.1124129),
-        new naver.maps.LatLng(37.5140327, 127.1024566),//잠실
+        new naver.maps.LatLng(37.5140327, 127.1024566), //잠실
         new naver.maps.LatLng(37.5137008, 127.1021133),
         new naver.maps.LatLng(37.5131987, 127.1016626),
         new naver.maps.LatLng(37.5128753, 127.1014695),
         new naver.maps.LatLng(37.5124668, 127.1013622),
         new naver.maps.LatLng(37.5120328, 127.1013301),
         new naver.maps.LatLng(37.5117009, 127.1013837),
-        new naver.maps.LatLng(37.5112754, 127.1015446),//석촌호수사거리
+        new naver.maps.LatLng(37.5112754, 127.1015446), //석촌호수사거리
         new naver.maps.LatLng(37.5099307, 127.1024029),
         new naver.maps.LatLng(37.5095732, 127.1027141),
-        new naver.maps.LatLng(37.5084668, 127.1039801),//석촌호수사거리
+        new naver.maps.LatLng(37.5084668, 127.1039801), //석촌호수사거리
         new naver.maps.LatLng(37.5077434, 127.1048491),
-        new naver.maps.LatLng(37.5054199, 127.1070163),//석촌
-        new naver.maps.LatLng(37.4996747, 127.1122627),//송파
-        new naver.maps.LatLng(37.4929628, 127.1183084),//가락시장
+        new naver.maps.LatLng(37.5054199, 127.1070163), //석촌
+        new naver.maps.LatLng(37.4996747, 127.1122627), //송파
+        new naver.maps.LatLng(37.4929628, 127.1183084), //가락시장
         new naver.maps.LatLng(37.4920647, 127.1190809),
         new naver.maps.LatLng(37.4911326, 127.1197783),
         new naver.maps.LatLng(37.490707, 127.120025),
         new naver.maps.LatLng(37.4897195, 127.1205508),
-        new naver.maps.LatLng(37.4859822, 127.1224712),//문정
-        new naver.maps.LatLng(37.477877, 127.1265911),//장지
+        new naver.maps.LatLng(37.4859822, 127.1224712), //문정
+        new naver.maps.LatLng(37.477877, 127.1265911), //장지
         new naver.maps.LatLng(37.477545, 127.1267413),
         new naver.maps.LatLng(37.4772385, 127.1268271),
         new naver.maps.LatLng(37.4763274, 127.1270417),
         new naver.maps.LatLng(37.4759017, 127.1270954),
         new naver.maps.LatLng(37.4750417, 127.1271168),
         new naver.maps.LatLng(37.4733984, 127.1269988),
-        new naver.maps.LatLng(37.4712271, 127.1267735),//복정
+        new naver.maps.LatLng(37.4712271, 127.1267735), //복정
         new naver.maps.LatLng(37.469456, 127.1266126),
         new naver.maps.LatLng(37.4691153, 127.1266555),
         new naver.maps.LatLng(37.4688173, 127.1267198),
@@ -115,12 +785,12 @@ var metro = new naver.maps.Polyline({ // 수도권 8호선
         new naver.maps.LatLng(37.4675145, 127.1278035),
         new naver.maps.LatLng(37.4668077, 127.1293162),
         new naver.maps.LatLng(37.4637676, 127.1369337),
-        new naver.maps.LatLng(37.4628478, 127.1390795),//추가역
+        new naver.maps.LatLng(37.4628478, 127.1390795), //추가역
         new naver.maps.LatLng(37.4626349, 127.1395033),
         new naver.maps.LatLng(37.4623795, 127.139986),
         new naver.maps.LatLng(37.4594328, 127.1452646),
         new naver.maps.LatLng(37.4570823, 127.1490841),
-        new naver.maps.LatLng(37.4566479, 127.1501141),//산성
+        new naver.maps.LatLng(37.4566479, 127.1501141), //산성
         new naver.maps.LatLng(37.4564265, 127.1511655),
         new naver.maps.LatLng(37.4563584, 127.1520345),
         new naver.maps.LatLng(37.4563584, 127.1538799),
@@ -134,28 +804,95 @@ var metro = new naver.maps.Polyline({ // 수도권 8호선
         new naver.maps.LatLng(37.4538203, 127.1603923),
         new naver.maps.LatLng(37.4531816, 127.1604459),
         new naver.maps.LatLng(37.4528068, 127.1603708),
-        new naver.maps.LatLng(37.4506945, 127.1594803),//남한산성입구
+        new naver.maps.LatLng(37.4506945, 127.1594803), //남한산성입구
         new naver.maps.LatLng(37.4461461, 127.1574955),
         new naver.maps.LatLng(37.4456734, 127.1572434),
-        new naver.maps.LatLng(37.4451878, 127.1568679),//단대오거리
+        new naver.maps.LatLng(37.4451878, 127.1568679), //단대오거리
         new naver.maps.LatLng(37.4448216, 127.1564655),
         new naver.maps.LatLng(37.4443701, 127.1557735),
         new naver.maps.LatLng(37.4425089, 127.1518146),
-        new naver.maps.LatLng(37.4409543, 127.1474962),//신흥
+        new naver.maps.LatLng(37.4409543, 127.1474962), //신흥
         new naver.maps.LatLng(37.4405795, 127.146477),
         new naver.maps.LatLng(37.4402259, 127.1456831),
         new naver.maps.LatLng(37.4396169, 127.1444653),
         new naver.maps.LatLng(37.4377598, 127.1413164),
-        new naver.maps.LatLng(37.4367418, 127.1394389),//수진
+        new naver.maps.LatLng(37.4367418, 127.1394389), //수진
         new naver.maps.LatLng(37.435613, 127.1373897),
         new naver.maps.LatLng(37.4353532, 127.1367781),
         new naver.maps.LatLng(37.4350422, 127.1358984),
         new naver.maps.LatLng(37.4348292, 127.1350025),
-        new naver.maps.LatLng(37.4336898, 127.1288602),//모란
+        new naver.maps.LatLng(37.4336898, 127.1288602), //모란
     ],
     strokeColor: '#e6186c',
     strokeOpacity: 1,
-    strokeWeight: 3
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 8호선 별내연장
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.5501453, 127.1275263),
+        new naver.maps.LatLng(37.5555805, 127.1294628),
+        new naver.maps.LatLng(37.5561929, 127.1298813),
+        new naver.maps.LatLng(37.5567202, 127.1305357),
+        new naver.maps.LatLng(37.5570349, 127.1315121),
+        new naver.maps.LatLng(37.5571114, 127.1323274),
+        new naver.maps.LatLng(37.5568563, 127.133926),
+        new naver.maps.LatLng(37.5567457, 127.1351706),
+        new naver.maps.LatLng(37.5568138, 127.1359645),
+        new naver.maps.LatLng(37.5574857, 127.138915),
+        new naver.maps.LatLng(37.5577919, 127.139666),
+        new naver.maps.LatLng(37.5583787, 127.1403097),
+        new naver.maps.LatLng(37.5587359, 127.1405779),
+        new naver.maps.LatLng(37.5594078, 127.1407389),
+        new naver.maps.LatLng(37.5598246, 127.1407925),
+        new naver.maps.LatLng(37.5790432, 127.1380352),
+        new naver.maps.LatLng(37.587673, 127.1379601),
+        new naver.maps.LatLng(37.5918388, 127.1378957),
+        new naver.maps.LatLng(37.5925699, 127.1380352),
+        new naver.maps.LatLng(37.5934625, 127.1384858),
+        new naver.maps.LatLng(37.5940661, 127.139033),
+        new naver.maps.LatLng(37.5946866, 127.1396767),
+        new naver.maps.LatLng(37.5969053, 127.1420049),
+        new naver.maps.LatLng(37.5972539, 127.1422945),
+        new naver.maps.LatLng(37.5978489, 127.1425628),
+        new naver.maps.LatLng(37.5982995, 127.1426379),
+        new naver.maps.LatLng(37.5990135, 127.1425306),
+        new naver.maps.LatLng(37.5994045, 127.1423589),
+        new naver.maps.LatLng(37.6010111, 127.1412646),
+        new naver.maps.LatLng(37.6014361, 127.1410929),
+        new naver.maps.LatLng(37.609889, 127.1382551),
+        new naver.maps.LatLng(37.610484, 127.1381049),
+        new naver.maps.LatLng(37.6116568, 127.1379655),
+        new naver.maps.LatLng(37.6131952, 127.1379869),
+        new naver.maps.LatLng(37.6140493, 127.1381908),
+        new naver.maps.LatLng(37.6148439, 127.1387433),
+        new naver.maps.LatLng(37.6152221, 127.139151),
+        new naver.maps.LatLng(37.6158467, 127.1401863),
+        new naver.maps.LatLng(37.6192801, 127.1478253),
+        new naver.maps.LatLng(37.619586, 127.148292),
+        new naver.maps.LatLng(37.6199684, 127.1486836),
+        new naver.maps.LatLng(37.6207587, 127.1492254),
+        new naver.maps.LatLng(37.6214046, 127.1493756),
+        new naver.maps.LatLng(37.6241154, 127.1497135),
+        new naver.maps.LatLng(37.6265159, 127.1500247),
+        new naver.maps.LatLng(37.6274166, 127.1501051),
+        new naver.maps.LatLng(37.6279647, 127.1500247),
+        new naver.maps.LatLng(37.6288781, 127.1497511),
+        new naver.maps.LatLng(37.6296768, 127.1491878),
+        new naver.maps.LatLng(37.629987, 127.148882),
+        new naver.maps.LatLng(37.6321919, 127.1462267),
+        new naver.maps.LatLng(37.6329651, 127.1449982),
+        new naver.maps.LatLng(37.6333857, 127.1441721),
+        new naver.maps.LatLng(37.6379227, 127.133175),
+        new naver.maps.LatLng(37.6381648, 127.1327727),
+        new naver.maps.LatLng(37.6388657, 127.1315872),
+        new naver.maps.LatLng(37.6399617, 127.1300315),
+        new naver.maps.LatLng(37.6451227, 127.1242594),
+
+    ],
+    strokeColor: '#e6186c',
+    strokeOpacity: 1,
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 수도권 9호선
     map: map,
@@ -165,7 +902,7 @@ var metro = new naver.maps.Polyline({ // 수도권 9호선
     ],
     strokeColor: '#bdb092',
     strokeOpacity: 1,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 경강선
     map: map,
@@ -175,7 +912,7 @@ var metro = new naver.maps.Polyline({ // 경강선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 경의중앙선
     map: map,
@@ -185,7 +922,7 @@ var metro = new naver.maps.Polyline({ // 경의중앙선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 경춘선
     map: map,
@@ -195,12 +932,12 @@ var metro = new naver.maps.Polyline({ // 경춘선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 공항철도
     map: map,
     path: [
-        new naver.maps.LatLng(37.5541697, 126.9697638),//서울역
+        new naver.maps.LatLng(37.5541697, 126.9697638), //서울역
         new naver.maps.LatLng(37.5529916, 126.9697746),
         new naver.maps.LatLng(37.5487727, 126.969973),
         new naver.maps.LatLng(37.5478625, 126.9701018),
@@ -231,7 +968,7 @@ var metro = new naver.maps.Polyline({ // 공항철도
         new naver.maps.LatLng(37.5396131, 126.9581633),
         new naver.maps.LatLng(37.5403, 126.9565781),
         new naver.maps.LatLng(37.5411295, 126.9548963),
-        new naver.maps.LatLng(37.5419589, 126.9529169),//공덕
+        new naver.maps.LatLng(37.5419589, 126.9529169), //공덕
         new naver.maps.LatLng(37.5429436, 126.950806),
         new naver.maps.LatLng(37.5441133, 126.9486441),
         new naver.maps.LatLng(37.5444557, 126.9480031),
@@ -254,7 +991,7 @@ var metro = new naver.maps.Polyline({ // 공항철도
         new naver.maps.LatLng(37.5552095, 126.9310301),
         new naver.maps.LatLng(37.5562535, 126.9292786),
         new naver.maps.LatLng(37.5568999, 126.9278838),
-        new naver.maps.LatLng(37.5572508, 126.9272642),//홍대입구
+        new naver.maps.LatLng(37.5572508, 126.9272642), //홍대입구
         new naver.maps.LatLng(37.558131, 126.9260036),
         new naver.maps.LatLng(37.5589773, 126.9250809),
         new naver.maps.LatLng(37.5650326, 126.9203602),
@@ -267,7 +1004,7 @@ var metro = new naver.maps.Polyline({ // 공항철도
         new naver.maps.LatLng(37.5712065, 126.9080757),
         new naver.maps.LatLng(37.5726309, 126.9055008),
         new naver.maps.LatLng(37.5748715, 126.9018798),
-        new naver.maps.LatLng(37.5757824, 126.9005631),//DMC
+        new naver.maps.LatLng(37.5757824, 126.9005631), //DMC
         new naver.maps.LatLng(37.5813092, 126.8922376),
         new naver.maps.LatLng(37.5829969, 126.889035),
         new naver.maps.LatLng(37.5836558, 126.8878709),
@@ -298,7 +1035,7 @@ var metro = new naver.maps.Polyline({ // 공항철도
         new naver.maps.LatLng(37.568329, 126.8318959),
         new naver.maps.LatLng(37.5679676, 126.8314775),
         new naver.maps.LatLng(37.5673128, 126.8305709),
-        new naver.maps.LatLng(37.5661137, 126.8283607),//마곡나루
+        new naver.maps.LatLng(37.5661137, 126.8283607), //마곡나루
         new naver.maps.LatLng(37.5616999, 126.8202122),
         new naver.maps.LatLng(37.5612874, 126.8192144),
         new naver.maps.LatLng(37.5609897, 126.8180342),
@@ -310,7 +1047,7 @@ var metro = new naver.maps.Polyline({ // 공항철도
         new naver.maps.LatLng(37.5614235, 126.8102076),
         new naver.maps.LatLng(37.5615128, 126.8071981),
         new naver.maps.LatLng(37.5615872, 126.8046447),
-        new naver.maps.LatLng(37.5616233, 126.8042021),//김포공항
+        new naver.maps.LatLng(37.5616233, 126.8042021), //김포공항
         new naver.maps.LatLng(37.5618275, 126.8014931),
         new naver.maps.LatLng(37.5621421, 126.7954581),
         new naver.maps.LatLng(37.5622527, 126.7946266),
@@ -344,13 +1081,13 @@ var metro = new naver.maps.Polyline({ // 공항철도
         new naver.maps.LatLng(37.5712586, 126.7449896),
         new naver.maps.LatLng(37.5716327, 126.7422431),
         new naver.maps.LatLng(37.5718028, 126.7395179),
-        new naver.maps.LatLng(37.5717858, 126.7373239),//계양
+        new naver.maps.LatLng(37.5717858, 126.7373239), //계양
         new naver.maps.LatLng(37.5717518, 126.7326568),
         new naver.maps.LatLng(37.5697151, 126.6884165),
         new naver.maps.LatLng(37.5693282, 126.6780149),
         //new naver.maps.LatLng(),
         //new naver.maps.LatLng(),
-        new naver.maps.LatLng(37.5692985, 126.6746782),//검암
+        new naver.maps.LatLng(37.5692985, 126.6746782), //검암
         new naver.maps.LatLng(37.5688563, 126.6648399),
         new naver.maps.LatLng(37.5684651, 126.6584884),
         new naver.maps.LatLng(37.5681164, 126.6556345),
@@ -366,7 +1103,7 @@ var metro = new naver.maps.Polyline({ // 공항철도
         new naver.maps.LatLng(37.5581916, 126.6326426),
         new naver.maps.LatLng(37.5579279, 126.6317629),
         new naver.maps.LatLng(37.5575792, 126.6303467),
-        new naver.maps.LatLng(37.5566266, 126.6256474),//청라
+        new naver.maps.LatLng(37.5566266, 126.6256474), //청라
         new naver.maps.LatLng(37.5562269, 126.6238235),
         new naver.maps.LatLng(37.5539134, 126.6124295),
         new naver.maps.LatLng(37.5517912, 126.6042971),
@@ -380,7 +1117,7 @@ var metro = new naver.maps.Polyline({ // 공항철도
         new naver.maps.LatLng(37.5155135, 126.5330308),
         new naver.maps.LatLng(37.5150454, 126.5320974),
         new naver.maps.LatLng(37.5135646, 126.5285997),
-        new naver.maps.LatLng(37.5124072, 126.525821),//영종
+        new naver.maps.LatLng(37.5124072, 126.525821), //영종
         new naver.maps.LatLng(37.5103562, 126.520757),
         new naver.maps.LatLng(37.5100924, 126.519963),
         new naver.maps.LatLng(37.5067306, 126.5089767),
@@ -391,7 +1128,7 @@ var metro = new naver.maps.Polyline({ // 공항철도
         new naver.maps.LatLng(37.5022707, 126.5010159),
         new naver.maps.LatLng(37.501343, 126.5001791),
         new naver.maps.LatLng(37.4995896, 126.4987736),
-        new naver.maps.LatLng(37.4934778, 126.494364),//운서
+        new naver.maps.LatLng(37.4934778, 126.494364), //운서
         new naver.maps.LatLng(37.4920988, 126.4933448),
         new naver.maps.LatLng(37.4854075, 126.4880555),
         new naver.maps.LatLng(37.4831174, 126.4863711),
@@ -458,18 +1195,82 @@ var metro = new naver.maps.Polyline({ // 공항철도
     ],
     strokeColor: '#0090d2',
     strokeOpacity: 1,
-    strokeWeight: 3
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 인천공항 자기부상철도
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.4474505, 126.4524837), //T1
+        new naver.maps.LatLng(37.444878, 126.4547904),
+        new naver.maps.LatLng(37.4436387, 126.4558258), //장기주차장
+        new naver.maps.LatLng(37.4407211, 126.4584382),
+        new naver.maps.LatLng(37.4402228, 126.4589049), //합동청사
+        new naver.maps.LatLng(37.4399672, 126.4590873),
+        new naver.maps.LatLng(37.439733, 126.4592107),
+        new naver.maps.LatLng(37.4394348, 126.4592483),
+        new naver.maps.LatLng(37.4392857, 126.4592429),
+        new naver.maps.LatLng(37.4386213, 126.4591463),
+        new naver.maps.LatLng(37.4384211, 126.4591356),
+        new naver.maps.LatLng(37.4381911, 126.4591571),
+        new naver.maps.LatLng(37.4379952, 126.4592375),
+        new naver.maps.LatLng(37.4377268, 126.4593931),
+        new naver.maps.LatLng(37.4368238, 126.4601548), //파라다이스시티
+        new naver.maps.LatLng(37.4356908, 126.4611741),
+        new naver.maps.LatLng(37.4353202, 126.4614155),
+        new naver.maps.LatLng(37.4349667, 126.4615335),
+        new naver.maps.LatLng(37.4346131, 126.4615174),
+        new naver.maps.LatLng(37.4342723, 126.4613887),
+        new naver.maps.LatLng(37.4339656, 126.4611097),
+        new naver.maps.LatLng(37.4337953, 126.4608951),
+        new naver.maps.LatLng(37.4310605, 126.456153),
+        new naver.maps.LatLng(37.430856, 126.4557292),
+        new naver.maps.LatLng(37.4305792, 126.4549836),
+        new naver.maps.LatLng(37.4304343, 126.4545276),
+        new naver.maps.LatLng(37.4301873, 126.4535352),
+        new naver.maps.LatLng(37.4302511, 126.4538228),
+        new naver.maps.LatLng(37.4300062, 126.4522128),
+        new naver.maps.LatLng(37.4299764, 126.4513223),
+        new naver.maps.LatLng(37.430019, 126.4503782),
+        new naver.maps.LatLng(37.430151, 126.4493911),
+        new naver.maps.LatLng(37.4304365, 126.4481734),
+        new naver.maps.LatLng(37.4316803, 126.4447187),
+        new naver.maps.LatLng(37.4318422, 126.4439784),
+        new naver.maps.LatLng(37.4319189, 126.4435117),
+        new naver.maps.LatLng(37.4320168, 126.4426588),
+        new naver.maps.LatLng(37.4320339, 126.4421867),
+        new naver.maps.LatLng(37.4320296, 126.4412104),
+        new naver.maps.LatLng(37.4319913, 126.4407437),
+        new naver.maps.LatLng(37.431872, 126.4398961),
+        new naver.maps.LatLng(37.431774, 126.4394241),
+        new naver.maps.LatLng(37.4315312, 126.4385121),
+        new naver.maps.LatLng(37.4313821, 126.4380508),
+        new naver.maps.LatLng(37.4310839, 126.437348),
+        new naver.maps.LatLng(37.4307687, 126.4366989),
+        new naver.maps.LatLng(37.4290137, 126.4339148), //워터파크
+        new naver.maps.LatLng(37.4242211, 126.4259111),
+        new naver.maps.LatLng(37.424073, 126.4256254),
+        new naver.maps.LatLng(37.4239868, 126.4253666),
+        new naver.maps.LatLng(37.4239644, 126.4251252),
+        new naver.maps.LatLng(37.4239793, 126.4248167),
+        new naver.maps.LatLng(37.4240464, 126.4245056),
+        new naver.maps.LatLng(37.4241295, 126.4243353),
+        new naver.maps.LatLng(37.4243095, 126.4240818),
+        new naver.maps.LatLng(37.4249741, 126.4234649), //용유역
+    ],
+    strokeColor: '#ffcd12',
+    strokeOpacity: 0.6,
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 서해선
     map: map,
     path: [
         new naver.maps.LatLng(),
         new naver.maps.LatLng(),
-        
+
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 수인분당선
     map: map,
@@ -479,7 +1280,7 @@ var metro = new naver.maps.Polyline({ // 수인분당선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 신분당선
     map: map,
@@ -489,17 +1290,120 @@ var metro = new naver.maps.Polyline({ // 신분당선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 골드라인
     map: map,
     path: [
-        new naver.maps.LatLng(),
-        new naver.maps.LatLng(),
+        new naver.maps.LatLng(37.6415345, 126.6149129), //양촌
+        new naver.maps.LatLng(37.6419932, 126.6145669),
+        new naver.maps.LatLng(37.6422375, 126.6144677),
+        new naver.maps.LatLng(37.6423713, 126.6144543),
+        new naver.maps.LatLng(37.6425136, 126.6144784),
+        new naver.maps.LatLng(37.6426155, 126.6145321),
+        new naver.maps.LatLng(37.6427345, 126.614634),
+        new naver.maps.LatLng(37.6428194, 126.614752),
+        new naver.maps.LatLng(37.6429044, 126.6149022),
+        new naver.maps.LatLng(37.6429893, 126.6151168),
+        new naver.maps.LatLng(37.6430488, 126.6153743),
+        new naver.maps.LatLng(37.6433207, 126.618137),
+        new naver.maps.LatLng(37.6456144, 126.6297885), //구래
+        new naver.maps.LatLng(37.6461921, 126.6326745),
+        new naver.maps.LatLng(37.6462473, 126.6330903),
+        new naver.maps.LatLng(37.646243, 126.6333183),
+        new naver.maps.LatLng(37.6462069, 126.6335007),
+        new naver.maps.LatLng(37.6461772, 126.6336428),
+        new naver.maps.LatLng(37.6461368, 126.6337474),
+        new naver.maps.LatLng(37.6460476, 126.6339298),
+        new naver.maps.LatLng(37.645916, 126.6341068),
+        new naver.maps.LatLng(37.6458268, 126.6342061),
+        new naver.maps.LatLng(37.6444718, 126.6354587),
+        new naver.maps.LatLng(37.6439939, 126.6360085),
+        new naver.maps.LatLng(37.6436541, 126.636486),
+        new naver.maps.LatLng(37.6411203, 126.6406326),
+        new naver.maps.LatLng(37.6408867, 126.640976),
+        new naver.maps.LatLng(37.640721, 126.6413032),
+        new naver.maps.LatLng(37.6405681, 126.6416841),
+        new naver.maps.LatLng(37.6404874, 126.6420489),
+        new naver.maps.LatLng(37.6404577, 126.6425799),
+        new naver.maps.LatLng(37.6410141, 126.6455304), //마산
+        new naver.maps.LatLng(37.642692, 126.6540651),
+        new naver.maps.LatLng(37.6427812, 126.6554009),
+        new naver.maps.LatLng(37.6426963, 126.656801),
+        new naver.maps.LatLng(37.6422842, 126.6589146),
+        new naver.maps.LatLng(37.6418934, 126.6598319),
+        new naver.maps.LatLng(37.6395146, 126.6641127),
+        new naver.maps.LatLng(37.6393914, 126.6644775),
+        new naver.maps.LatLng(37.6393936, 126.6648449),
+        new naver.maps.LatLng(37.6395847, 126.6651051),
+        new naver.maps.LatLng(37.6447882, 126.6696434), //장기
+        new naver.maps.LatLng(37.6472752, 126.671816),
+        new naver.maps.LatLng(37.6529623, 126.6805922),
+        new naver.maps.LatLng(37.6533063, 126.6812896),
+        new naver.maps.LatLng(37.6535781, 126.682003),
+        new naver.maps.LatLng(37.6537523, 126.6827648),
+        new naver.maps.LatLng(37.6538669, 126.683843),
+        new naver.maps.LatLng(37.653816, 126.6850232), //운양
+        new naver.maps.LatLng(37.653731, 126.6856133),
+        new naver.maps.LatLng(37.6535739, 126.6862999),
+        new naver.maps.LatLng(37.6532511, 126.6872333),
+        new naver.maps.LatLng(37.6499765, 126.6945719),
+        new naver.maps.LatLng(37.649522, 126.6952371),
+        new naver.maps.LatLng(37.6488, 126.6958647),
+        new naver.maps.LatLng(37.6356872, 126.7016905),
+        new naver.maps.LatLng(37.634315, 126.7024737),
+        new naver.maps.LatLng(37.6333167, 126.703391),
+        new naver.maps.LatLng(37.6328451, 126.7039596),
+        new naver.maps.LatLng(37.6310523, 126.7066525), //걸포북변
+        new naver.maps.LatLng(37.6296461, 126.7087929),
+        new naver.maps.LatLng(37.6290003, 126.7097478),
+        new naver.maps.LatLng(37.6280231, 126.7110138),
+        new naver.maps.LatLng(37.6272159, 126.7118507),
+        new naver.maps.LatLng(37.6262812, 126.7126339),
+        new naver.maps.LatLng(37.6231626, 126.7145382),
+        new naver.maps.LatLng(37.622572, 126.7150425),
+        new naver.maps.LatLng(37.6221769, 126.7156165),
+        new naver.maps.LatLng(37.6217902, 126.7164104),
+        new naver.maps.LatLng(37.6208002, 126.7188137),
+        new naver.maps.LatLng(37.6198399, 126.7207395),
+        new naver.maps.LatLng(37.6128308, 126.7316936),
+        new naver.maps.LatLng(37.6122911, 126.7327075),
+        new naver.maps.LatLng(37.6119554, 126.733657), //풍무
+        new naver.maps.LatLng(37.6112203, 126.73613),
+        new naver.maps.LatLng(37.6106126, 126.7376803),
+        new naver.maps.LatLng(37.6069239, 126.746081),
+        new naver.maps.LatLng(37.6062864, 126.7477386),
+        new naver.maps.LatLng(37.6059422, 126.7492567),
+        new naver.maps.LatLng(37.6051049, 126.7541545),
+        new naver.maps.LatLng(37.6049413, 126.7570915),
+        new naver.maps.LatLng(37.6048181, 126.7584031),
+        new naver.maps.LatLng(37.6040255, 126.7620589),
+        new naver.maps.LatLng(37.6038661, 126.7633035),
+        new naver.maps.LatLng(37.6038045, 126.7648779),
+        new naver.maps.LatLng(37.6036706, 126.7659133),
+        new naver.maps.LatLng(37.6032456, 126.7672141),
+        new naver.maps.LatLng(37.6025698, 126.7689737),
+        new naver.maps.LatLng(37.6022596, 126.7694913),
+        new naver.maps.LatLng(37.6005532, 126.7709263),
+        new naver.maps.LatLng(37.6003173, 126.7711194),
+        new naver.maps.LatLng(37.5999348, 126.7716076),
+        new naver.maps.LatLng(37.5895615, 126.7880871),
+        new naver.maps.LatLng(37.5810722, 126.7982848),
+        new naver.maps.LatLng(37.5807619, 126.7985531),
+        new naver.maps.LatLng(37.5745548, 126.8027427),
+        new naver.maps.LatLng(37.5738575, 126.8031289),
+        new naver.maps.LatLng(37.5638867, 126.8063368),
+        new naver.maps.LatLng(37.5633339, 126.8063368),
+        new naver.maps.LatLng(37.5629214, 126.8061598),
+        new naver.maps.LatLng(37.5626663, 126.8059399),
+        new naver.maps.LatLng(37.5624834, 126.8056931),
+        new naver.maps.LatLng(37.5622921, 126.80528),
+        new naver.maps.LatLng(37.5621773, 126.8045559),
+        new naver.maps.LatLng(37.5623729, 126.8012889), //김포공항
     ],
-    strokeColor: '#ab087d',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeColor: '#ad8605',
+    strokeOpacity: 1,
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 에버라인
     map: map,
@@ -509,7 +1413,7 @@ var metro = new naver.maps.Polyline({ // 에버라인
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 우이신설선
     map: map,
@@ -519,7 +1423,7 @@ var metro = new naver.maps.Polyline({ // 우이신설선
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 의정부경전철
     map: map,
@@ -529,29 +1433,794 @@ var metro = new naver.maps.Polyline({ // 의정부경전철
     ],
     strokeColor: '#ab087d',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 인천1호선
     map: map,
     path: [
-        new naver.maps.LatLng(),
-        new naver.maps.LatLng(),
+        new naver.maps.LatLng(37.5714967, 126.7346256), //계양역
+        new naver.maps.LatLng(37.5715185, 126.7378352),
+        new naver.maps.LatLng(37.5714929, 126.7385326),
+        new naver.maps.LatLng(37.5713824, 126.7391656),
+        new naver.maps.LatLng(37.5712889, 126.7393801),
+        new naver.maps.LatLng(37.5711018, 126.7397127),
+        new naver.maps.LatLng(37.5706596, 126.740335),
+        new naver.maps.LatLng(37.5704172, 126.7405228),
+        new naver.maps.LatLng(37.5673983, 126.742116),//귤현
+        new naver.maps.LatLng(37.5668413, 126.7424218),
+        new naver.maps.LatLng(37.5664246, 126.7425827),
+        new naver.maps.LatLng(37.5658378, 126.7427329),
+        new naver.maps.LatLng(37.5641965, 126.742808),
+        new naver.maps.LatLng(37.563784, 126.7427597),
+        new naver.maps.LatLng(37.5633801, 126.7427812),
+        new naver.maps.LatLng(37.5629251, 126.7428724),
+        new naver.maps.LatLng(37.5624913, 126.7430387),
+        new naver.maps.LatLng(37.5621724, 126.7432103),
+        new naver.maps.LatLng(37.5618195, 126.7434571),
+        new naver.maps.LatLng(37.5597103, 126.7453454),
+        new naver.maps.LatLng(37.5593105, 126.7456082),
+        new naver.maps.LatLng(37.5588725, 126.7457852),
+        new naver.maps.LatLng(37.558409, 126.7458818),
+        new naver.maps.LatLng(37.5579455, 126.7458764),
+        new naver.maps.LatLng(37.5545136, 126.7453078),//박촌
+        new naver.maps.LatLng(37.5533823, 126.7449108),
+        new naver.maps.LatLng(37.552889, 126.7443851),
+        new naver.maps.LatLng(37.5502819, 126.7424378),
+        new naver.maps.LatLng(37.5491166, 126.7417351),
+        new naver.maps.LatLng(37.5479257, 126.7410324),
+        new naver.maps.LatLng(37.5471474, 126.7404101),
+        new naver.maps.LatLng(37.5457991, 126.7392407),//임학
+        new naver.maps.LatLng(37.5435364, 126.737406),
+        new naver.maps.LatLng(37.5432727, 126.7370734),
+        new naver.maps.LatLng(37.5431068, 126.7368213),
+        new naver.maps.LatLng(37.5429154, 126.7364082),
+        new naver.maps.LatLng(37.5428388, 126.736022),
+        new naver.maps.LatLng(37.5428218, 126.7356358),
+        new naver.maps.LatLng(37.5432599, 126.7292038),//계산
+        new naver.maps.LatLng(37.5433577, 126.7269347),
+        new naver.maps.LatLng(37.5433279, 126.7256204),
+        new naver.maps.LatLng(37.5432556, 126.7251912),
+        new naver.maps.LatLng(37.5431536, 126.7247782),
+        new naver.maps.LatLng(37.5430174, 126.7243973),
+        new naver.maps.LatLng(37.542809, 126.7240164),
+        new naver.maps.LatLng(37.5425921, 126.7236678),
+        new naver.maps.LatLng(37.5423369, 126.7234049),
+        new naver.maps.LatLng(37.5419881, 126.7231099),
+        new naver.maps.LatLng(37.54155, 126.7228524),
+        new naver.maps.LatLng(37.5412352, 126.7227397),
+        new naver.maps.LatLng(37.5409758, 126.7226861),
+        new naver.maps.LatLng(37.540678, 126.7226807),
+        new naver.maps.LatLng(37.5390659, 126.7226378),//경인교대입구
+        new naver.maps.LatLng(37.531192, 126.7225466),//작전
+        new naver.maps.LatLng(37.529401, 126.7225198),
+        new naver.maps.LatLng(37.5274355, 126.7225412),
+        new naver.maps.LatLng(37.5266017, 126.7224447),
+        new naver.maps.LatLng(37.5244106, 126.7218492),
+        new naver.maps.LatLng(37.5239044, 126.7217741),
+        new naver.maps.LatLng(37.5233045, 126.721758),
+        new naver.maps.LatLng(37.5217813, 126.7219243),
+        new naver.maps.LatLng(37.5212537, 126.721919),
+        new naver.maps.LatLng(37.5180159, 126.72164),//갈산
+        new naver.maps.LatLng(37.5162373, 126.7214683),
+        new naver.maps.LatLng(37.5106291, 126.7206851),
+        new naver.maps.LatLng(37.509744, 126.72061),
+        new naver.maps.LatLng(37.5093355, 126.7206422),//부평구청
+        new naver.maps.LatLng(37.5075482, 126.7205564),
+        new naver.maps.LatLng(37.5051481, 126.7213611),
+        new naver.maps.LatLng(37.4992496, 126.722155),//부평시장
+        new naver.maps.LatLng(37.4952404, 126.7226914),
+        new naver.maps.LatLng(37.4914524, 126.7234317),
+        new naver.maps.LatLng(37.4912736, 126.723421),//부평
+        new naver.maps.LatLng(37.4891709, 126.7235712),
+        new naver.maps.LatLng(37.4883877, 126.7233781),
+        new naver.maps.LatLng(37.4879621, 126.723185),
+        new naver.maps.LatLng(37.4876471, 126.7230026),
+        new naver.maps.LatLng(37.4874513, 126.7227451),
+        new naver.maps.LatLng(37.487298, 126.722509),
+        new naver.maps.LatLng(37.4858593, 126.719344),//동수
+        new naver.maps.LatLng(37.483152, 126.7134968),
+        new naver.maps.LatLng(37.4827008, 126.7127887),
+        new naver.maps.LatLng(37.4818324, 126.7118338),
+        new naver.maps.LatLng(37.4811853, 126.7114476),
+        new naver.maps.LatLng(37.4790227, 126.7107288),//부평사거리
+        new naver.maps.LatLng(37.4751998, 126.7092911),
+        new naver.maps.LatLng(37.4705677, 126.7080251),
+        new naver.maps.LatLng(37.4679812, 126.7079715),//간석오거리
+        new naver.maps.LatLng(37.4673255, 126.7079822),
+        new naver.maps.LatLng(37.4667337, 126.7078213),
+        new naver.maps.LatLng(37.4663079, 126.7074136),
+        new naver.maps.LatLng(37.4660737, 126.7072312),
+        new naver.maps.LatLng(37.4657799, 126.7069576),
+        new naver.maps.LatLng(37.4652775, 126.7062763),
+        new naver.maps.LatLng(37.4650476, 126.7057399),
+        new naver.maps.LatLng(37.4648986, 126.7052678),
+        new naver.maps.LatLng(37.4643578, 126.7028967),
+        new naver.maps.LatLng(37.4642599, 126.702607),
+        new naver.maps.LatLng(37.464064, 126.7022637),
+        new naver.maps.LatLng(37.4638043, 126.7019097),
+        new naver.maps.LatLng(37.4634849, 126.7015932),
+        new naver.maps.LatLng(37.4631698, 126.701384),
+        new naver.maps.LatLng(37.462744, 126.7012177),
+        new naver.maps.LatLng(37.4624545, 126.7011479),
+        new naver.maps.LatLng(37.462182, 126.7011211),
+        new naver.maps.LatLng(37.4618882, 126.7011426),
+        new naver.maps.LatLng(37.4615859, 126.701223),
+        new naver.maps.LatLng(37.4605554, 126.7016146),
+        new naver.maps.LatLng(37.4601211, 126.7019365),
+        new naver.maps.LatLng(37.4596952, 126.7021672),
+        new naver.maps.LatLng(37.459312, 126.7023066),
+        new naver.maps.LatLng(37.4589032, 126.7023978),
+        new naver.maps.LatLng(37.4587542, 126.7023764),//인천시청
+        new naver.maps.LatLng(37.4503693, 126.7011747),//예술회관
+        new naver.maps.LatLng(37.4443004, 126.7002252),
+        new naver.maps.LatLng(37.4428054, 126.6998551),//인천터미널
+        new naver.maps.LatLng(37.4410208, 126.6995493),
+        new naver.maps.LatLng(37.440663, 126.6995171),
+        new naver.maps.LatLng(37.4385249, 126.6991255),
+        new naver.maps.LatLng(37.4371491, 126.6989592),
+        new naver.maps.LatLng(37.4358414, 126.6985891),//문학경기장
+        new naver.maps.LatLng(37.4340865, 126.6980634),
+        new naver.maps.LatLng(37.4337031, 126.6980205),
+        new naver.maps.LatLng(37.4313176, 126.6987822),
+        new naver.maps.LatLng(37.4305509, 126.6989646),
+        new naver.maps.LatLng(37.4293666, 126.6990504),
+        new naver.maps.LatLng(37.4278757, 126.6989861),//선학
+        new naver.maps.LatLng(37.4260864, 126.6988466),
+        new naver.maps.LatLng(37.4253622, 126.6988466),
+        new naver.maps.LatLng(37.4244335, 126.6986964),
+        new naver.maps.LatLng(37.4226101, 126.6981278),
+        new naver.maps.LatLng(37.4216984, 126.6976664),
+        new naver.maps.LatLng(37.4211361, 126.697248),
+        new naver.maps.LatLng(37.4188099, 126.694834),//신연수
+        new naver.maps.LatLng(37.4130196, 126.6885737),//원인재
+        new naver.maps.LatLng(37.4113536, 126.6868035),
+        new naver.maps.LatLng(37.4056011, 126.6817556),
+        new naver.maps.LatLng(37.4054477, 126.6815571),//동춘
+        new naver.maps.LatLng(37.4040287, 126.680173),
+        new naver.maps.LatLng(37.403496, 126.67976),
+        new naver.maps.LatLng(37.3987956, 126.6743848),//동막
+        new naver.maps.LatLng(37.3928184, 126.66769),
+        new naver.maps.LatLng(37.3924178, 126.6673092),
+        new naver.maps.LatLng(37.3907748, 126.6658554),
+        new naver.maps.LatLng(37.390404, 126.6654558),
+        new naver.maps.LatLng(37.3901632, 126.6650213),
+        new naver.maps.LatLng(37.3900374, 126.6647128),
+        new naver.maps.LatLng(37.3899074, 126.66434),
+        new naver.maps.LatLng(37.3896624, 126.6638035),
+        new naver.maps.LatLng(37.3893597, 126.6632993),
+        new naver.maps.LatLng(37.3890273, 126.6628701),
+        new naver.maps.LatLng(37.3889527, 126.6627816),//캠퍼스타운
+        new naver.maps.LatLng(37.3828064, 126.65687),//테크노파크
+        new naver.maps.LatLng(37.3766766, 126.6509262),
+        new naver.maps.LatLng(37.376425, 126.650599),
+        new naver.maps.LatLng(37.3762034, 126.650245),
+        new naver.maps.LatLng(37.3760371, 126.6498909),
+        new naver.maps.LatLng(37.3759348, 126.6496012),
+        new naver.maps.LatLng(37.3758495, 126.6491399),
+        new naver.maps.LatLng(37.3758154, 126.6487215),
+        new naver.maps.LatLng(37.3758325, 126.6483567),
+        new naver.maps.LatLng(37.3758922, 126.6479544),
+        new naver.maps.LatLng(37.3760414, 126.6474769),
+        new naver.maps.LatLng(37.3762417, 126.647037),
+        new naver.maps.LatLng(37.3765103, 126.6466669),
+        new naver.maps.LatLng(37.3768044, 126.6463611),
+        new naver.maps.LatLng(37.3772478, 126.6460124),//지식정보단지
+        new naver.maps.LatLng(37.385432, 126.6399775),
+        new naver.maps.LatLng(37.3920853, 126.6354821),
+        new naver.maps.LatLng(37.3996415, 126.630638),//국제업무지구
+        new naver.maps.LatLng(37.4075165, 126.6256598),//송도달빛축제공원
     ],
-    strokeColor: '#ab087d',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeColor: '#759cce',
+    strokeOpacity: 1,
+    strokeWeight: 2
 });
 var metro = new naver.maps.Polyline({ // 인천2호선
     map: map,
     path: [
-        new naver.maps.LatLng(),
+        new naver.maps.LatLng(37.5950427, 126.6274254),//검단오류
+        new naver.maps.LatLng(37.5936825, 126.6353594),
+        new naver.maps.LatLng(37.5936102, 126.6359817),
+        new naver.maps.LatLng(37.5936357, 126.6371619),
+        new naver.maps.LatLng(37.5938568, 126.638444),
+        new naver.maps.LatLng(37.5949832, 126.6420167),//왕길
+        new naver.maps.LatLng(37.5959012, 126.6447418),
+        new naver.maps.LatLng(37.5976651, 126.6482501),
+        new naver.maps.LatLng(37.598766, 126.650589),
+        new naver.maps.LatLng(37.6002408, 126.6530137),
+        new naver.maps.LatLng(37.6006615, 126.6538774),
+        new naver.maps.LatLng(37.6012778, 126.6554867),//검단사거리
+        new naver.maps.LatLng(37.6020343, 126.6575386),
+        new naver.maps.LatLng(37.6020556, 126.6577398),
+        new naver.maps.LatLng(37.6020088, 126.658067),
+        new naver.maps.LatLng(37.6019175, 126.6583379),
+        new naver.maps.LatLng(37.6017963, 126.6585981),
+        new naver.maps.LatLng(37.5994545, 126.6630935),
+        new naver.maps.LatLng(37.5992887, 126.6635387),
+        new naver.maps.LatLng(37.5987277, 126.6653572),
+        new naver.maps.LatLng(37.5985662, 126.66584),
+        new naver.maps.LatLng(37.5983239, 126.6663389),
+        new naver.maps.LatLng(37.5965218, 126.6686939),
+        new naver.maps.LatLng(37.5961053, 126.6694449),
+        new naver.maps.LatLng(37.5951362, 126.6716658),
+        new naver.maps.LatLng(37.5949619, 126.6719769),
+        new naver.maps.LatLng(37.5946261, 126.6723846),
+        new naver.maps.LatLng(37.5942521, 126.6726797),
+        new naver.maps.LatLng(37.5937845, 126.672846),
+        new naver.maps.LatLng(37.5937271, 126.6728513),//완정
+        new naver.maps.LatLng(37.5910748, 126.6733771),//검단분기
+        new naver.maps.LatLng(37.5899186, 126.6736775),
+        new naver.maps.LatLng(37.586892, 126.6753297),
+        new naver.maps.LatLng(37.5857612, 126.6756838),
+        new naver.maps.LatLng(37.5849312, 126.6759603), //독정
+        new naver.maps.LatLng(37.5840475, 126.6762463),
+        new naver.maps.LatLng(37.5838604, 126.6762892),
+        new naver.maps.LatLng(37.5832057, 126.6762356),
+        new naver.maps.LatLng(37.5809186, 126.6755382),
+        new naver.maps.LatLng(37.5797112, 126.6753236),
+        new naver.maps.LatLng(37.5778491, 126.6753236),
+        new naver.maps.LatLng(37.5766162, 126.675152),
+        new naver.maps.LatLng(37.5747285, 126.6746477),
+        new naver.maps.LatLng(37.5738356, 126.6745082),
+        new naver.maps.LatLng(37.5727302, 126.6744439),
+        new naver.maps.LatLng(37.57222, 126.6744653),
+        new naver.maps.LatLng(37.5709189, 126.6747228),
+        new naver.maps.LatLng(37.5700856, 126.6749803),
+        new naver.maps.LatLng(37.5695328, 126.6752056),
+        new naver.maps.LatLng(37.5684018, 126.6758279),//검암
+        new naver.maps.LatLng(37.5659016, 126.6773299),
+        new naver.maps.LatLng(37.5653488, 126.6775767),
+        new naver.maps.LatLng(37.5648641, 126.677641),
+        new naver.maps.LatLng(37.5607649, 126.6775123),//검바위
+        new naver.maps.LatLng(37.5504563, 126.6770831),//아시아드경기장
+        new naver.maps.LatLng(37.5431748, 126.6768149),//서구청
+        new naver.maps.LatLng(37.5317493, 126.676257),
+        new naver.maps.LatLng(37.5269761, 126.6755275),
+        new naver.maps.LatLng(37.5263294, 126.6754524),//가정
+        new naver.maps.LatLng(37.5238108, 126.6753129),
+        new naver.maps.LatLng(37.522679, 126.6752378),
+        new naver.maps.LatLng(37.5223387, 126.6753236),
+        new naver.maps.LatLng(37.5220409, 126.6755382),
+        new naver.maps.LatLng(37.5214027, 126.6766111),
+        new naver.maps.LatLng(37.5210793, 126.6769008),
+        new naver.maps.LatLng(37.5208921, 126.6769759),
+        new naver.maps.LatLng(37.5206709, 126.6770188),
+        new naver.maps.LatLng(37.5166628, 126.676772),//가정중앙시장
+        new naver.maps.LatLng(37.5127652, 126.6765252),
+        new naver.maps.LatLng(37.5115652, 126.6765252),
+        new naver.maps.LatLng(37.506195, 126.6762141),//석남
+        new naver.maps.LatLng(37.4993943, 126.6758064),//서부여성회관
+        new naver.maps.LatLng(37.4891454, 126.6751841),//인천가좌
+        new naver.maps.LatLng(37.4888219, 126.6751841),
+        new naver.maps.LatLng(37.4885239, 126.6752485),
+        new naver.maps.LatLng(37.48826, 126.6754094),
+        new naver.maps.LatLng(37.4880472, 126.6756777),
+        new naver.maps.LatLng(37.4878599, 126.6761712),
+        new naver.maps.LatLng(37.4877833, 126.6782097),
+        new naver.maps.LatLng(37.4876896, 126.6787568),
+        new naver.maps.LatLng(37.487579, 126.6790465),
+        new naver.maps.LatLng(37.4874002, 126.6793791),
+        new naver.maps.LatLng(37.4835096, 126.684647),//가재울
+        new naver.maps.LatLng(37.4825901, 126.685913),
+        new naver.maps.LatLng(37.4822921, 126.6861812),
+        new naver.maps.LatLng(37.4819601, 126.6863421),
+        new naver.maps.LatLng(37.4803765, 126.6865674),
+        new naver.maps.LatLng(37.4801296, 126.686546),
+        new naver.maps.LatLng(37.4797975, 126.6864065),
+        new naver.maps.LatLng(37.4783501, 126.6855375),
+        new naver.maps.LatLng(37.4776264, 126.684883),
+        new naver.maps.LatLng(37.475038, 126.6818897),
+        new naver.maps.LatLng(37.4748251, 126.6817073),
+        new naver.maps.LatLng(37.4745697, 126.6815034),
+        new naver.maps.LatLng(37.4731563, 126.6809133),//주안국가산단
+        new naver.maps.LatLng(37.4703719, 126.6799907),
+        new naver.maps.LatLng(37.4660205, 126.6793362),
+        new naver.maps.LatLng(37.4642833, 126.6785745),//주안
+        new naver.maps.LatLng(37.4634402, 126.6781131),
+        new naver.maps.LatLng(37.4628271, 126.6779307),
+        new naver.maps.LatLng(37.4623928, 126.6778663),
+        new naver.maps.LatLng(37.4594547, 126.6777698),
+        new naver.maps.LatLng(37.4592503, 126.6777805),
+        new naver.maps.LatLng(37.4589692, 126.6779093),
+        new naver.maps.LatLng(37.4587308, 126.6782097),
+        new naver.maps.LatLng(37.458586, 126.6785423),
+        new naver.maps.LatLng(37.4585349, 126.6788856),
+        new naver.maps.LatLng(37.4583305, 126.6822223),//시민공원
+        new naver.maps.LatLng(37.457581, 126.6934661),//석바위시장
+        new naver.maps.LatLng(37.4568145, 126.7020813),//인천시청
+        new naver.maps.LatLng(37.4566953, 126.7034761),
+        new naver.maps.LatLng(37.4567038, 126.7040018),
+        new naver.maps.LatLng(37.4569253, 126.7079822),
+        new naver.maps.LatLng(37.4569253, 126.7087225),
+        new naver.maps.LatLng(37.4568571, 126.7097095),
+        new naver.maps.LatLng(37.4566442, 126.7119733),//석천사거리
+        new naver.maps.LatLng(37.4559799, 126.7185179),
+        new naver.maps.LatLng(37.455801, 126.7207602),//모래내시장
+        new naver.maps.LatLng(37.455537, 126.7250732),
+        new naver.maps.LatLng(37.4548897, 126.732798),//만수
+        new naver.maps.LatLng(37.4548812, 126.7329375),
+        new naver.maps.LatLng(37.4547705, 126.7334417),
+        new naver.maps.LatLng(37.4543872, 126.7342249),
+        new naver.maps.LatLng(37.4534078, 126.735684),
+        new naver.maps.LatLng(37.4530671, 126.7359415),
+        new naver.maps.LatLng(37.4529053, 126.7360274),
+        new naver.maps.LatLng(37.4525987, 126.7360166),
+        new naver.maps.LatLng(37.4523261, 126.7359201),
+        new naver.maps.LatLng(37.4494813, 126.7343751),
+        new naver.maps.LatLng(37.4491747, 126.7343429),
+        new naver.maps.LatLng(37.4488084, 126.7344288),
+        new naver.maps.LatLng(37.4486636, 126.7345253),
+        new naver.maps.LatLng(37.4483911, 126.7349008),
+        new naver.maps.LatLng(37.4482548, 126.7353407),
+        new naver.maps.LatLng(37.4481355, 126.7377333),//남동구청
+        new naver.maps.LatLng(37.4480163, 126.7403833),
+        new naver.maps.LatLng(37.4476245, 126.7442993),
+        new naver.maps.LatLng(37.447616, 126.7448036),
+        new naver.maps.LatLng(37.4477352, 126.7455009),
+        new naver.maps.LatLng(37.447863, 126.7458335),
+        new naver.maps.LatLng(37.4489021, 126.7479256),
+        new naver.maps.LatLng(37.4490214, 126.748151),
+        new naver.maps.LatLng(37.4491321, 126.7486981),
+        new naver.maps.LatLng(37.4491747, 126.749256),
+        new naver.maps.LatLng(37.4491236, 126.7496101),
+        new naver.maps.LatLng(37.4484081, 126.7532364),//인천대공원
+        new naver.maps.LatLng(37.4480631, 126.7548994),
+        new naver.maps.LatLng(37.447863, 126.7553983),
+        new naver.maps.LatLng(37.4476628, 126.7557255),
+        new naver.maps.LatLng(37.4474286, 126.7560259),
+        new naver.maps.LatLng(37.4470708, 126.7563907),
+        new naver.maps.LatLng(37.4450393, 126.757705),
+        new naver.maps.LatLng(37.4428672, 126.7595074),
+        new naver.maps.LatLng(37.4424796, 126.7597488),
+        new naver.maps.LatLng(37.4420281, 126.7599527),
+        new naver.maps.LatLng(37.4415383, 126.7600224),
+        new naver.maps.LatLng(37.4410442, 126.7599527),
+        new naver.maps.LatLng(37.4393448, 126.7595235),//운연
+    ],
+    strokeColor: '#f5a251',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 인1 검단연장
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.5714967, 126.7346256), //계양역
+        new naver.maps.LatLng(37.5712075, 126.7259567),
+        new naver.maps.LatLng(37.5706803, 126.7239182),
+        new naver.maps.LatLng(37.5708844, 126.7214506),
+        new naver.maps.LatLng(37.5720239, 126.7199485),
+        new naver.maps.LatLng(37.5735715, 126.7193048),
+        new naver.maps.LatLng(37.5854583, 126.7162578),
+        new naver.maps.LatLng(37.5911204, 126.7134683),
+        new naver.maps.LatLng(37.5964421, 126.7128246),
+        new naver.maps.LatLng(37.5977512, 126.7119663),
+        new naver.maps.LatLng(37.6009983, 126.7081254),
+        new naver.maps.LatLng(37.6019333, 126.7055934),
+        new naver.maps.LatLng(37.6027153, 126.7010872),
+        new naver.maps.LatLng(37.6028173, 126.6984265),
+        new naver.maps.LatLng(37.6025878, 126.6890173),
+        new naver.maps.LatLng(37.6018483, 126.6829984), //검단역
+    ],
+    strokeColor: '#759cce',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 인2 일산연장
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.5849312, 126.6759603), //독정
+        new naver.maps.LatLng(37.5857612, 126.6756838),
+        new naver.maps.LatLng(37.586892, 126.6753297),
+        new naver.maps.LatLng(37.5899186, 126.6736775),
+        new naver.maps.LatLng(37.5910748, 126.6733771),//검단분기
+        new naver.maps.LatLng(37.5933552, 126.674171),//완정
+        new naver.maps.LatLng(37.5938238, 126.6797154),
+        new naver.maps.LatLng(37.5948949, 126.686775),
+        new naver.maps.LatLng(37.59549, 126.6883414),
+        new naver.maps.LatLng(37.596085, 126.6889422),
+        new naver.maps.LatLng(37.5971051, 126.6894572),
+        new naver.maps.LatLng(37.5974961, 126.6896074),
+        new naver.maps.LatLng(37.5993153, 126.6895216),
+        new naver.maps.LatLng(37.5999783, 126.6895001),
+        new naver.maps.LatLng(37.6010323, 126.6891782),
+        new naver.maps.LatLng(37.6025623, 126.6884701), //검단역
+        new naver.maps.LatLng(37.6092771, 126.6839855),
+        new naver.maps.LatLng(37.610586, 126.6835134),
+        new naver.maps.LatLng(37.6117418, 126.6828911),
+        new naver.maps.LatLng(37.6120818, 126.682977),
+        new naver.maps.LatLng(37.6124218, 126.6832774),
+        new naver.maps.LatLng(37.6131017, 126.6846292),
+        new naver.maps.LatLng(37.6137816, 126.6854875),
+        new naver.maps.LatLng(37.6178439, 126.689071),
+        new naver.maps.LatLng(37.6189656, 126.6905944),
+        new naver.maps.LatLng(37.6192036, 126.691603),
+        new naver.maps.LatLng(37.6192376, 126.6930192), //감정
+        new naver.maps.LatLng(37.6194075, 126.6953366),
+        new naver.maps.LatLng(37.6199684, 126.6967528),
+        new naver.maps.LatLng(37.6205293, 126.6972034),
+        new naver.maps.LatLng(37.6225858, 126.6978042),
+        new naver.maps.LatLng(37.625288, 126.696667),
+        new naver.maps.LatLng(37.6264437, 126.6970103),
+        new naver.maps.LatLng(37.6267326, 126.6972463),
+        new naver.maps.LatLng(37.6296726, 126.701967),
+        new naver.maps.LatLng(37.6307942, 126.7028039),
+        new naver.maps.LatLng(37.6314399, 126.7038767),
+        new naver.maps.LatLng(37.6317288, 126.7068594), //걸포북변
+        new naver.maps.LatLng(37.6314569, 126.7088549),
+        new naver.maps.LatLng(37.6307432, 126.7102711),
+        new naver.maps.LatLng(37.6306412, 126.7109363),
+        new naver.maps.LatLng(37.6307772, 126.711344),
+        new naver.maps.LatLng(37.6397323, 126.7175453), //시네폴리스
+        new naver.maps.LatLng(37.6421111, 126.7192404),
+        new naver.maps.LatLng(37.6524069, 126.7394106),
+        new naver.maps.LatLng(37.6551251, 126.741256), //테크노밸리
+        new naver.maps.LatLng(37.6652663, 126.7482083), //킨텍스
+        new naver.maps.LatLng(37.6668799, 126.7494528),
+        new naver.maps.LatLng(37.6673046, 126.7505686),
+        new naver.maps.LatLng(37.6671347, 126.7524569),
+        new naver.maps.LatLng(37.6664213, 126.7546671),
+        new naver.maps.LatLng(37.665572, 126.7566197),
+        new naver.maps.LatLng(37.6653682, 126.757242),
+        new naver.maps.LatLng(37.6655041, 126.7576711),
+        new naver.maps.LatLng(37.6660986, 126.7584221),
+        new naver.maps.LatLng(37.670192, 126.7612331), //주엽
+        new naver.maps.LatLng(37.6770195, 126.7659752), //후곡
+        new naver.maps.LatLng(37.6814689, 126.7690652),
+        new naver.maps.LatLng(37.6824454, 126.7690866), //일산
+        new naver.maps.LatLng(37.6834728, 126.7688613),
+        new naver.maps.LatLng(37.6864275, 126.7708032),
+        new naver.maps.LatLng(37.6884482, 126.7731636),
+        new naver.maps.LatLng(37.6893822, 126.7739146),
+        new naver.maps.LatLng(37.6902312, 126.7741935),
+        new naver.maps.LatLng(37.692897, 126.7730777),
+        new naver.maps.LatLng(37.6935762, 126.7728417), //현산
+        new naver.maps.LatLng(37.694544, 126.7723482),
+        new naver.maps.LatLng(37.6951722, 126.7718117),
+        new naver.maps.LatLng(37.6962758, 126.7703097),
+        new naver.maps.LatLng(37.6978209, 126.7690222),
+        new naver.maps.LatLng(37.6997903, 126.7682283), //큰마을
+        new naver.maps.LatLng(37.7017767, 126.7674129),
+        new naver.maps.LatLng(37.7036612, 126.7657178),
+        new naver.maps.LatLng(37.7050533, 126.76634),
+    ],
+    strokeColor: '#f5a251',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 7호선청라연장
+    map: map,
+    path: [
         new naver.maps.LatLng(),
     ],
-    strokeColor: '#ab087d',
+    strokeColor: '#941e34',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 7호선포천연장
+    map: map,
+    path: [
+        new naver.maps.LatLng(),
+    ],
+    strokeColor: '#941e34',
     strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeWeight: 2
 });
 
+var metro = new naver.maps.Polyline({ // 동북선
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.5614617, 127.0358055),
+        new naver.maps.LatLng(37.5660031, 127.0365994),
+        new naver.maps.LatLng(37.5701361, 127.0376723),
+        new naver.maps.LatLng(37.5781292, 127.0383375),
+        new naver.maps.LatLng(37.5829586, 127.0386379),
+        new naver.maps.LatLng(37.5865975, 127.0384448),
+        new naver.maps.LatLng(37.5896071, 127.0364707),
+        new naver.maps.LatLng(37.5911884, 127.0363205),
+        new naver.maps.LatLng(37.5930757, 127.036299),
+        new naver.maps.LatLng(37.5971051, 127.035269),
+        new naver.maps.LatLng(37.6006073, 127.0338314),
+        new naver.maps.LatLng(37.6023413, 127.0326512),
+        new naver.maps.LatLng(37.6084102, 127.0305698),
+        new naver.maps.LatLng(37.6090051, 127.0308917),
+        new naver.maps.LatLng(37.6096851, 127.0314281),
+        new naver.maps.LatLng(37.6126597, 127.0371788),
+        new naver.maps.LatLng(37.6158043, 127.0400541),
+        new naver.maps.LatLng(37.6187277, 127.0441096),
+        new naver.maps.LatLng(37.6195435, 127.0447533),
+        new naver.maps.LatLng(37.6214471, 127.0457404),
+        new naver.maps.LatLng(37.6222289, 127.0463841),
+        new naver.maps.LatLng(37.6227217, 127.0470708),
+        new naver.maps.LatLng(37.6245402, 127.0502679),
+        new naver.maps.LatLng(37.6372345, 127.0703523),
+        new naver.maps.LatLng(37.6378122, 127.0714252),
+        new naver.maps.LatLng(37.6379312, 127.0724123),
+        new naver.maps.LatLng(37.6380841, 127.0737426),
+        new naver.maps.LatLng(37.6381181, 127.0739358),
+        new naver.maps.LatLng(37.6387128, 127.0753734),
+        new naver.maps.LatLng(37.6396303, 127.076103),
+        new naver.maps.LatLng(37.640293, 127.0762317),
+        new naver.maps.LatLng(37.6511838, 127.0767682),
+        new naver.maps.LatLng(37.6527807, 127.0781415),
+        new naver.maps.LatLng(37.6562973, 127.0781844),
+        new naver.maps.LatLng(37.6568409, 127.0778411),
+        new naver.maps.LatLng(37.6570447, 127.0774334),
+        new naver.maps.LatLng(37.6577752, 127.0750945),
+        new naver.maps.LatLng(37.6602893, 127.0720904),
+
+    ],
+    strokeColor: '#941e34',
+    strokeOpacity: 0.6,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 위례선
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.4942099, 127.1515267),
+        new naver.maps.LatLng(37.4930522, 127.1524494),
+        new naver.maps.LatLng(37.4926436, 127.1530609),
+        new naver.maps.LatLng(37.4919626, 127.1544771),
+        new naver.maps.LatLng(37.4914774, 127.1552067),
+        new naver.maps.LatLng(37.4911794, 127.1553998),
+        new naver.maps.LatLng(37.4908304, 127.1552389),
+        new naver.maps.LatLng(37.49026, 127.1545522),
+        new naver.maps.LatLng(37.4864547, 127.1475785),
+        new naver.maps.LatLng(37.4861312, 127.1469669),
+        new naver.maps.LatLng(37.4860886, 127.1463447),
+        new naver.maps.LatLng(37.4857907, 127.1457009),
+        new naver.maps.LatLng(37.4853905, 127.1453791),
+        new naver.maps.LatLng(37.4824278, 127.143523),
+        new naver.maps.LatLng(37.4820617, 127.1434693),
+        new naver.maps.LatLng(37.481338, 127.1432548),
+        new naver.maps.LatLng(37.4765956, 127.1429114),
+        new naver.maps.LatLng(37.4755143, 127.1422784),
+        new naver.maps.LatLng(37.4709163, 127.1419888),
+        new naver.maps.LatLng(37.4703884, 127.1419566),
+        new naver.maps.LatLng(37.4683149, 127.1417527),
+        new naver.maps.LatLng(37.4670972, 127.1417313),
+        new naver.maps.LatLng(37.464551, 127.1400039),
+        new naver.maps.LatLng(37.4630863, 127.1385448),
+
+    ],
+    strokeColor: '#FF0066',
+    strokeOpacity: 0.6,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 위례선 지선
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.4703884, 127.1419566),
+        new naver.maps.LatLng(37.4700094, 127.1419244),
+        new naver.maps.LatLng(37.4698349, 127.1418439),
+        new naver.maps.LatLng(37.4697157, 127.141683),
+        new naver.maps.LatLng(37.4696561, 127.1414362),
+        new naver.maps.LatLng(37.4697242, 127.1396123),
+        new naver.maps.LatLng(37.4697157, 127.1393978),
+        new naver.maps.LatLng(37.469639, 127.1391295),
+        new naver.maps.LatLng(37.4689237, 127.1375524),
+        new naver.maps.LatLng(37.4688556, 127.1372842),
+        new naver.maps.LatLng(37.4689621, 127.1366512),
+        new naver.maps.LatLng(37.4689961, 127.13634),
+        new naver.maps.LatLng(37.4691068, 127.1327298),
+        new naver.maps.LatLng(37.4692048, 127.132601),
+        new naver.maps.LatLng(37.4694261, 127.1323167),
+        new naver.maps.LatLng(37.4701499, 127.131437),
+        new naver.maps.LatLng(37.470465, 127.1306216),
+        new naver.maps.LatLng(37.4705714, 127.1292322),
+        new naver.maps.LatLng(37.4706651, 127.1267216),
+    ],
+    strokeColor: '#FF0066',
+    strokeOpacity: 0.6,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 위례신사선
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.4741732, 127.1421872),
+        new naver.maps.LatLng(37.4743478, 127.1359967),
+        new naver.maps.LatLng(37.474467, 127.1350526),
+        new naver.maps.LatLng(37.4757272, 127.1280145),
+        new naver.maps.LatLng(37.4762167, 127.1236639),
+        new naver.maps.LatLng(37.4762891, 127.1234547),
+        new naver.maps.LatLng(37.476387, 127.1234279),
+        new naver.maps.LatLng(37.4764935, 127.1234171),
+        new naver.maps.LatLng(37.4772172, 127.1235405),
+        new naver.maps.LatLng(37.4779324, 127.1235727),
+        new naver.maps.LatLng(37.4782644, 127.1234976),
+        new naver.maps.LatLng(37.4876806, 127.1185838),
+        new naver.maps.LatLng(37.491903, 127.1166526),
+        new naver.maps.LatLng(37.4963465, 127.114421),
+        new naver.maps.LatLng(37.4966955, 127.1140455),
+        new naver.maps.LatLng(37.4968572, 127.1133267),
+        new naver.maps.LatLng(37.4965508, 127.1123504),
+        new naver.maps.LatLng(37.4943631, 127.1042501),
+        new naver.maps.LatLng(37.4943802, 127.1033596),
+        new naver.maps.LatLng(37.4950611, 127.1017717),
+        new naver.maps.LatLng(37.4955889, 127.1005057),
+        new naver.maps.LatLng(37.5005514, 127.0867406),
+        new naver.maps.LatLng(37.5007812, 127.085657),
+        new naver.maps.LatLng(37.5007727, 127.0849167),
+        new naver.maps.LatLng(37.500645, 127.0840048),
+        new naver.maps.LatLng(37.496687, 127.070583),
+        new naver.maps.LatLng(37.496704, 127.0701968),
+        new naver.maps.LatLng(37.4968062, 127.0699285),
+        new naver.maps.LatLng(37.4969679, 127.069671),
+        new naver.maps.LatLng(37.5240655, 127.0549189),
+        new naver.maps.LatLng(37.524542, 127.0543395),
+        new naver.maps.LatLng(37.5248228, 127.0535992),
+        new naver.maps.LatLng(37.5248824, 127.0527731),
+        new naver.maps.LatLng(37.5231806, 127.0392012),
+        new naver.maps.LatLng(37.5197258, 127.0281934),
+        new naver.maps.LatLng(37.5165517, 127.0205973),
+
+    ],
+    strokeColor: '#3333FF',
+    strokeOpacity: 0.6,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 3호선 하남연장
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.5020196, 127.1281673),
+        new naver.maps.LatLng(37.5057774, 127.1317964),
+        new naver.maps.LatLng(37.5093435, 127.1339743),
+        new naver.maps.LatLng(37.5125604, 127.1357124),
+        new naver.maps.LatLng(37.5131476, 127.1364312),
+        new naver.maps.LatLng(37.5135391, 127.1371715),
+        new naver.maps.LatLng(37.5136242, 127.1389096),
+        new naver.maps.LatLng(37.5124072, 127.1419029),
+        new naver.maps.LatLng(37.506671, 127.1578353),
+        new naver.maps.LatLng(37.5062455, 127.158715),
+        new naver.maps.LatLng(37.5055135, 127.1599381),
+        new naver.maps.LatLng(37.5049348, 127.1611719),
+        new naver.maps.LatLng(37.5041177, 127.1681135),
+        new naver.maps.LatLng(37.5046114, 127.1914594),
+        new naver.maps.LatLng(37.5051561, 127.1933477),
+        new naver.maps.LatLng(37.5119307, 127.1979826),
+        new naver.maps.LatLng(37.5316041, 127.2018449),
+        new naver.maps.LatLng(37.5330675, 127.2023921),
+        new naver.maps.LatLng(37.5339013, 127.2031646),
+        new naver.maps.LatLng(37.538002, 127.2045915),
+        new naver.maps.LatLng(37.5405456, 127.2064101),
+        new naver.maps.LatLng(37.5417026, 127.2068446),
+    ],
+    strokeColor: '#fe5d10',
+    strokeOpacity: 0.6,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // GTX-A
+    map: map,
+    path: [
+        new naver.maps.LatLng(37.7209926, 126.728081), // 파주 시작점
+        new naver.maps.LatLng(37.7001384, 126.728199), // 가좌천
+        new naver.maps.LatLng(37.6971247, 126.7285745),
+        new naver.maps.LatLng(37.6948326, 126.7291753),
+        new naver.maps.LatLng(37.6934573, 126.729583),
+        new naver.maps.LatLng(37.6705657, 126.7414062),
+        new naver.maps.LatLng(37.6684426, 126.7426078),
+        new naver.maps.LatLng(37.6671347, 126.7441528),
+        new naver.maps.LatLng(37.666778, 126.7447536),
+        new naver.maps.LatLng(37.6652153, 126.748337), // 킨텍스역
+        new naver.maps.LatLng(37.6612915, 126.7571347),
+        new naver.maps.LatLng(37.6609857, 126.7576497),
+        new naver.maps.LatLng(37.6604592, 126.7584221),
+        new naver.maps.LatLng(37.659389, 126.7596023),
+        new naver.maps.LatLng(37.6581829, 126.7604606),
+        new naver.maps.LatLng(37.6546664, 126.7622202),
+        new naver.maps.LatLng(37.6526618, 126.7635934),
+        new naver.maps.LatLng(37.6509799, 126.7652242),
+        new naver.maps.LatLng(37.6499096, 126.7666619),
+        new naver.maps.LatLng(37.637243, 126.7866819),
+        new naver.maps.LatLng(37.6365293, 126.787669),
+        new naver.maps.LatLng(37.6345921, 126.7921321),
+        new naver.maps.LatLng(37.6329608, 126.7979686),
+        new naver.maps.LatLng(37.632553, 126.8007581),
+        new naver.maps.LatLng(37.6323831, 126.8042772),
+        new naver.maps.LatLng(37.632451, 126.8101137), // 대곡역
+        new naver.maps.LatLng(37.6323746, 126.8179457),
+        new naver.maps.LatLng(37.6322216, 126.820113),
+        new naver.maps.LatLng(37.6297236, 126.840369),
+        new naver.maps.LatLng(37.6292477, 126.8433516),
+        new naver.maps.LatLng(37.6243023, 126.8694656),
+        new naver.maps.LatLng(37.6223308, 126.8799369),
+        new naver.maps.LatLng(37.621617, 126.8837993),
+        new naver.maps.LatLng(37.6210732, 126.8893569),
+        new naver.maps.LatLng(37.6200874, 126.9036906),
+        new naver.maps.LatLng(37.6188637, 126.9212859), // 연신내역
+        new naver.maps.LatLng(37.6187617, 126.9235175),
+        new naver.maps.LatLng(37.6183198, 126.9277017),
+        new naver.maps.LatLng(37.6174869, 126.931371),
+        new naver.maps.LatLng(37.6161612, 126.9349544),
+        new naver.maps.LatLng(37.6151074, 126.9369714),
+        new naver.maps.LatLng(37.6134416, 126.9395034),
+        new naver.maps.LatLng(37.6045003, 126.9520133),
+        new naver.maps.LatLng(37.6033953, 126.953408),
+        new naver.maps.LatLng(37.6016783, 126.9551032),
+        new naver.maps.LatLng(37.6004373, 126.9561975),
+        new naver.maps.LatLng(37.5985672, 126.9573991),
+        new naver.maps.LatLng(37.5716497, 126.975091),
+        new naver.maps.LatLng(37.5701191, 126.9760995),
+        new naver.maps.LatLng(37.5693537, 126.9765501),
+        new naver.maps.LatLng(37.568835, 126.9767861),
+        new naver.maps.LatLng(37.5678911, 126.9770544),
+        new naver.maps.LatLng(37.5664624, 126.9771295),
+        new naver.maps.LatLng(37.5644979, 126.9770973),
+        new naver.maps.LatLng(37.5639451, 126.9770544),
+        new naver.maps.LatLng(37.5626949, 126.9766359),
+        new naver.maps.LatLng(37.5623122, 126.9764536),
+        new naver.maps.LatLng(37.5589528, 126.9739537),
+        new naver.maps.LatLng(37.5580258, 126.9733636),
+        new naver.maps.LatLng(37.5572433, 126.9730203),
+        new naver.maps.LatLng(37.5557804, 126.9726877), // 서울역
+        new naver.maps.LatLng(37.5549638, 126.9726126),
+        new naver.maps.LatLng(37.5524972, 126.9722478),
+        new naver.maps.LatLng(37.552174, 126.9722264),
+        new naver.maps.LatLng(37.5514765, 126.9722478),
+        new naver.maps.LatLng(37.5503197, 126.9724839),
+        new naver.maps.LatLng(37.5495542, 126.9728057),
+        new naver.maps.LatLng(37.5490438, 126.9731062),
+        new naver.maps.LatLng(37.547921, 126.9740718),
+        new naver.maps.LatLng(37.546611, 126.9761961),
+        new naver.maps.LatLng(37.5459645, 126.9785349),
+        new naver.maps.LatLng(37.5382912, 127.015764),
+        new naver.maps.LatLng(37.5309745, 127.0417063),
+        new naver.maps.LatLng(37.5295111, 127.0466416),
+        new naver.maps.LatLng(37.5281667, 127.0497315),
+        new naver.maps.LatLng(37.5271797, 127.0513837),
+        new naver.maps.LatLng(37.5266862, 127.0519846),
+        new naver.maps.LatLng(37.524508, 127.0542162),
+        new naver.maps.LatLng(37.5095477, 127.0627349), // 삼성역
+        new naver.maps.LatLng(37.5045943, 127.0655458),
+        new naver.maps.LatLng(37.5029942, 127.0674555),
+        new naver.maps.LatLng(37.5026027, 127.068228),
+        new naver.maps.LatLng(37.5019899, 127.0705454),
+        new naver.maps.LatLng(37.5003726, 127.0777767),
+        new naver.maps.LatLng(37.4997258, 127.0800941),
+        new naver.maps.LatLng(37.4949079, 127.0939987),
+        new naver.maps.LatLng(37.4943631, 127.0950286),
+        new naver.maps.LatLng(37.4937673, 127.0958011),
+        new naver.maps.LatLng(37.4924393, 127.0966809),
+        new naver.maps.LatLng(37.4912646, 127.0973032),
+        new naver.maps.LatLng(37.49026, 127.09814),
+        new naver.maps.LatLng(37.486344, 127.1028607), // 수서역
+        new naver.maps.LatLng(37.4852713, 127.1042152),
+        new naver.maps.LatLng(37.4840965, 127.1053096),
+        new naver.maps.LatLng(37.4688045, 127.115223),
+        new naver.maps.LatLng(37.4671696, 127.1161242),
+        new naver.maps.LatLng(37.4634567, 127.1176048),
+        new naver.maps.LatLng(37.4613447, 127.1180769),
+        new naver.maps.LatLng(37.4593008, 127.1183773),
+        new naver.maps.LatLng(37.4407328, 127.118785), // 탄천
+        new naver.maps.LatLng(37.4219897, 127.1175833),
+        new naver.maps.LatLng(37.4182746, 127.1174546),
+        new naver.maps.LatLng(37.4150025, 127.1177121),
+        new naver.maps.LatLng(37.3946846, 127.1205445), // 성남역
+        new naver.maps.LatLng(37.3942755, 127.120566),
+        new naver.maps.LatLng(37.3929117, 127.1204587),
+        new naver.maps.LatLng(37.3909426, 127.119933),
+        new naver.maps.LatLng(37.3890673, 127.1188815),
+        new naver.maps.LatLng(37.3878397, 127.1178838),
+        new naver.maps.LatLng(37.3791016, 127.1081205),
+        new naver.maps.LatLng(37.3774902, 127.1062966),
+        new naver.maps.LatLng(37.3749069, 127.1044834),
+        new naver.maps.LatLng(37.3722126, 127.1035929),
+        new naver.maps.LatLng(37.3713771, 127.1035071),
+        new naver.maps.LatLng(37.2987951, 127.1038451), // 용인역
+        new naver.maps.LatLng(37.2920012, 127.1039148),
+        new naver.maps.LatLng(37.250781, 127.1040436),
+        new naver.maps.LatLng(37.2479456, 127.1039577),
+        new naver.maps.LatLng(37.2455201, 127.1037002),
+        new naver.maps.LatLng(37.2409763, 127.1028419),
+        new naver.maps.LatLng(37.2377306, 127.101769),
+        new naver.maps.LatLng(37.2243362, 127.0971342),
+        new naver.maps.LatLng(37.2221492, 127.0965334),
+        new naver.maps.LatLng(37.2195861, 127.0960613),
+        new naver.maps.LatLng(37.2163737, 127.0955892),
+        new naver.maps.LatLng(37.1997047, 127.0955034), // 동탄역
+    ],
+    strokeColor: '#ab087d',
+    strokeOpacity: 0.5,
+    strokeWeight: 4
+});
 /*var metro = new naver.maps.Polyline({ // GTX-A 김포지선(안)
             map: map,
             path: [
@@ -579,7 +2248,7 @@ var metro = new naver.maps.Polyline({ // 인천2호선
                  ],
                     strokeColor: '#ab087d',
                     strokeOpacity: 0.6,
-                    strokeWeight: 3
+                    strokeWeight: 2
             });*/
 var metro = new naver.maps.Polyline({ // GTX-B
     map: map,
@@ -713,8 +2382,8 @@ var metro = new naver.maps.Polyline({ // GTX-B
         new naver.maps.LatLng(37.386041, 126.6395896), // 인천대입구역
     ],
     strokeColor: '#234699',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeOpacity: 0.5,
+    strokeWeight: 4
 });
 var metro = new naver.maps.Polyline({ // GTX-C
     map: map,
@@ -841,10 +2510,10 @@ var metro = new naver.maps.Polyline({ // GTX-C
         new naver.maps.LatLng(37.2646872, 127.0008938), //수원역
     ],
     strokeColor: '#306e5b',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
+    strokeOpacity: 0.5,
+    strokeWeight: 4
 });
-var metro = new naver.maps.Polyline({ // GTX-D
+var metro = new naver.maps.Polyline({ // GTX-D 본선
     map: map,
     path: [
         new naver.maps.LatLng(37.6874634, 126.6027467), //통진역
@@ -867,7 +2536,7 @@ var metro = new naver.maps.Polyline({ // GTX-D
         new naver.maps.LatLng(37.5756803, 126.7216652),
         new naver.maps.LatLng(37.5717688, 126.7383378), //계양역
         new naver.maps.LatLng(37.5054455, 126.7974751), //부종운역
-        new naver.maps.LatLng(37.5024835, 126.8005006),
+        /*new naver.maps.LatLng(37.5024835, 126.8005006),
         new naver.maps.LatLng(37.5023644, 126.8815892), //구로역
         new naver.maps.LatLng(37.477115, 126.9634073),
         new naver.maps.LatLng(37.4766382, 126.9788139),
@@ -893,14 +2562,16 @@ var metro = new naver.maps.Polyline({ // GTX-D
         new naver.maps.LatLng(37.5415069, 127.2072308), //하남시청역
         new naver.maps.LatLng(37.5344968, 127.2239463),
         new naver.maps.LatLng(37.5345479, 127.2261136),
-        new naver.maps.LatLng(37.5385464, 127.2292035), //차고지
+        new naver.maps.LatLng(37.5385464, 127.2292035), //차고지*/
     ],
 
     strokeColor: '#4a8b3d',
-    strokeOpacity: 1,
-    strokeWeight: 3
+    strokeOpacity: 0.5,
+    strokeWeight: 4
 });
-var metro = new naver.maps.Polyline({ // GTX-D
+/*
+
+var metro = new naver.maps.Polyline({ // GTX-D 인천지선
     map: map,
     path: [
         new naver.maps.LatLng(37.5054455, 126.7974751), //부종운역
@@ -998,514 +2669,8 @@ var metro = new naver.maps.Polyline({ // GTX-D
 
     strokeColor: '#4a8b3d',
     strokeOpacity: 1,
-    strokeWeight: 3
+    strokeWeight: 2
 });
+*/
 
-var metro = new naver.maps.Polyline({ // 인1 검단연장
-    map: map,
-    path: [
-        new naver.maps.LatLng(37.5714967, 126.7346256), //계양역
-        new naver.maps.LatLng(37.5712075, 126.7259567),
-        new naver.maps.LatLng(37.5706803, 126.7239182),
-        new naver.maps.LatLng(37.5708844, 126.7214506),
-        new naver.maps.LatLng(37.5720239, 126.7199485),
-        new naver.maps.LatLng(37.5735715, 126.7193048),
-        new naver.maps.LatLng(37.5854583, 126.7162578),
-        new naver.maps.LatLng(37.5911204, 126.7134683),
-        new naver.maps.LatLng(37.5964421, 126.7128246),
-        new naver.maps.LatLng(37.5977512, 126.7119663),
-        new naver.maps.LatLng(37.6009983, 126.7081254),
-        new naver.maps.LatLng(37.6019333, 126.7055934),
-        new naver.maps.LatLng(37.6027153, 126.7010872),
-        new naver.maps.LatLng(37.6028173, 126.6984265),
-        new naver.maps.LatLng(37.6025878, 126.6890173),
-        new naver.maps.LatLng(37.6018483, 126.6829984), //검단역
-    ],
-    strokeColor: '#759cce',
-    strokeOpacity: 1,
-    strokeWeight: 3
-});
-var metro = new naver.maps.Polyline({ // 인2 일산연장
-    map: map,
-    path: [
-        new naver.maps.LatLng(37.5849312, 126.6759603), //독정
-        new naver.maps.LatLng(37.5897432, 126.6737716),
-        new naver.maps.LatLng(37.5910694, 126.6733854),
-        new naver.maps.LatLng(37.5919705, 126.6734283),
-        new naver.maps.LatLng(37.5934837, 126.6740077), //완정
-        new naver.maps.LatLng(37.5936538, 126.6747801),
-        new naver.maps.LatLng(37.5938238, 126.6797154),
-        new naver.maps.LatLng(37.5948949, 126.686775),
-        new naver.maps.LatLng(37.59549, 126.6883414),
-        new naver.maps.LatLng(37.596085, 126.6889422),
-        new naver.maps.LatLng(37.5971051, 126.6894572),
-        new naver.maps.LatLng(37.5974961, 126.6896074),
-        new naver.maps.LatLng(37.5993153, 126.6895216),
-        new naver.maps.LatLng(37.5999783, 126.6895001),
-        new naver.maps.LatLng(37.6010323, 126.6891782),
-        new naver.maps.LatLng(37.6025623, 126.6884701), //검단역
-        new naver.maps.LatLng(37.6092771, 126.6839855),
-        new naver.maps.LatLng(37.610586, 126.6835134),
-        new naver.maps.LatLng(37.6117418, 126.6828911),
-        new naver.maps.LatLng(37.6120818, 126.682977),
-        new naver.maps.LatLng(37.6124218, 126.6832774),
-        new naver.maps.LatLng(37.6131017, 126.6846292),
-        new naver.maps.LatLng(37.6137816, 126.6854875),
-        new naver.maps.LatLng(37.6178439, 126.689071),
-        new naver.maps.LatLng(37.6189656, 126.6905944),
-        new naver.maps.LatLng(37.6192036, 126.691603),
-        new naver.maps.LatLng(37.6192376, 126.6930192), //감정
-        new naver.maps.LatLng(37.6194075, 126.6953366),
-        new naver.maps.LatLng(37.6199684, 126.6967528),
-        new naver.maps.LatLng(37.6205293, 126.6972034),
-        new naver.maps.LatLng(37.6225858, 126.6978042),
-        new naver.maps.LatLng(37.625288, 126.696667),
-        new naver.maps.LatLng(37.6264437, 126.6970103),
-        new naver.maps.LatLng(37.6267326, 126.6972463),
-        new naver.maps.LatLng(37.6296726, 126.701967),
-        new naver.maps.LatLng(37.6307942, 126.7028039),
-        new naver.maps.LatLng(37.6314399, 126.7038767),
-        new naver.maps.LatLng(37.6317288, 126.7068594), //걸포북변
-        new naver.maps.LatLng(37.6314569, 126.7088549),
-        new naver.maps.LatLng(37.6307432, 126.7102711),
-        new naver.maps.LatLng(37.6306412, 126.7109363),
-        new naver.maps.LatLng(37.6307772, 126.711344),
-        new naver.maps.LatLng(37.6397323, 126.7175453), //시네폴리스
-        new naver.maps.LatLng(37.6421111, 126.7192404),
-        new naver.maps.LatLng(37.6524069, 126.7394106),
-        new naver.maps.LatLng(37.6551251, 126.741256), //테크노밸리
-        new naver.maps.LatLng(37.6652663, 126.7482083), //킨텍스
-        new naver.maps.LatLng(37.6668799, 126.7494528),
-        new naver.maps.LatLng(37.6673046, 126.7505686),
-        new naver.maps.LatLng(37.6671347, 126.7524569),
-        new naver.maps.LatLng(37.6664213, 126.7546671),
-        new naver.maps.LatLng(37.665572, 126.7566197),
-        new naver.maps.LatLng(37.6653682, 126.757242),
-        new naver.maps.LatLng(37.6655041, 126.7576711),
-        new naver.maps.LatLng(37.6660986, 126.7584221),
-        new naver.maps.LatLng(37.670192, 126.7612331), //주엽
-        new naver.maps.LatLng(37.6770195, 126.7659752), //후곡
-        new naver.maps.LatLng(37.6814689, 126.7690652),
-        new naver.maps.LatLng(37.6824454, 126.7690866), //일산
-        new naver.maps.LatLng(37.6834728, 126.7688613),
-        new naver.maps.LatLng(37.6864275, 126.7708032),
-        new naver.maps.LatLng(37.6884482, 126.7731636),
-        new naver.maps.LatLng(37.6893822, 126.7739146),
-        new naver.maps.LatLng(37.6902312, 126.7741935),
-        new naver.maps.LatLng(37.692897, 126.7730777),
-        new naver.maps.LatLng(37.6935762, 126.7728417), //현산
-        new naver.maps.LatLng(37.694544, 126.7723482),
-        new naver.maps.LatLng(37.6951722, 126.7718117),
-        new naver.maps.LatLng(37.6962758, 126.7703097),
-        new naver.maps.LatLng(37.6978209, 126.7690222),
-        new naver.maps.LatLng(37.6997903, 126.7682283), //큰마을
-        new naver.maps.LatLng(37.7017767, 126.7674129),
-        new naver.maps.LatLng(37.7036612, 126.7657178),
-        new naver.maps.LatLng(37.7050533, 126.76634),
-    ],
-    strokeColor: '#f5a251',
-    strokeOpacity: 1,
-    strokeWeight: 3
-});
-var metro = new naver.maps.Polyline({ // 7호선청라연장
-    map: map,
-    path: [
-        new naver.maps.LatLng(),
-    ],
-    strokeColor: '#941e34',
-    strokeOpacity: 1,
-    strokeWeight: 3
-});
-var metro = new naver.maps.Polyline({ // 7호선포천연장
-    map: map,
-    path: [
-        new naver.maps.LatLng(),
-    ],
-    strokeColor: '#941e34',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
-});
-
-var metro = new naver.maps.Polyline({ // 동북선
-    map: map,
-    path: [
-        new naver.maps.LatLng(37.5614617, 127.0358055),
-        new naver.maps.LatLng(37.5660031, 127.0365994),
-        new naver.maps.LatLng(37.5701361, 127.0376723),
-        new naver.maps.LatLng(37.5781292, 127.0383375),
-        new naver.maps.LatLng(37.5829586, 127.0386379),
-        new naver.maps.LatLng(37.5865975, 127.0384448),
-        new naver.maps.LatLng(37.5896071, 127.0364707),
-        new naver.maps.LatLng(37.5911884, 127.0363205),
-        new naver.maps.LatLng(37.5930757, 127.036299),
-        new naver.maps.LatLng(37.5971051, 127.035269),
-        new naver.maps.LatLng(37.6006073, 127.0338314),
-        new naver.maps.LatLng(37.6023413, 127.0326512),
-        new naver.maps.LatLng(37.6084102, 127.0305698),
-        new naver.maps.LatLng(37.6090051, 127.0308917),
-        new naver.maps.LatLng(37.6096851, 127.0314281),
-        new naver.maps.LatLng(37.6126597, 127.0371788),
-        new naver.maps.LatLng(37.6158043, 127.0400541),
-        new naver.maps.LatLng(37.6187277, 127.0441096),
-        new naver.maps.LatLng(37.6195435, 127.0447533),
-        new naver.maps.LatLng(37.6214471, 127.0457404),
-        new naver.maps.LatLng(37.6222289, 127.0463841),
-        new naver.maps.LatLng(37.6227217, 127.0470708),
-        new naver.maps.LatLng(37.6245402, 127.0502679),
-        new naver.maps.LatLng(37.6372345, 127.0703523),
-        new naver.maps.LatLng(37.6378122, 127.0714252),
-        new naver.maps.LatLng(37.6379312, 127.0724123),
-        new naver.maps.LatLng(37.6380841, 127.0737426),
-        new naver.maps.LatLng(37.6381181, 127.0739358),
-        new naver.maps.LatLng(37.6387128, 127.0753734),
-        new naver.maps.LatLng(37.6396303, 127.076103),
-        new naver.maps.LatLng(37.640293, 127.0762317),
-        new naver.maps.LatLng(37.6511838, 127.0767682),
-        new naver.maps.LatLng(37.6527807, 127.0781415),
-        new naver.maps.LatLng(37.6562973, 127.0781844),
-        new naver.maps.LatLng(37.6568409, 127.0778411),
-        new naver.maps.LatLng(37.6570447, 127.0774334),
-        new naver.maps.LatLng(37.6577752, 127.0750945),
-        new naver.maps.LatLng(37.6602893, 127.0720904),
-
-    ],
-    strokeColor: '#941e34',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
-});
-var metro = new naver.maps.Polyline({ // 위례선
-    map: map,
-    path: [
-        new naver.maps.LatLng(37.4942099, 127.1515267),
-        new naver.maps.LatLng(37.4930522, 127.1524494),
-        new naver.maps.LatLng(37.4926436, 127.1530609),
-        new naver.maps.LatLng(37.4919626, 127.1544771),
-        new naver.maps.LatLng(37.4914774, 127.1552067),
-        new naver.maps.LatLng(37.4911794, 127.1553998),
-        new naver.maps.LatLng(37.4908304, 127.1552389),
-        new naver.maps.LatLng(37.49026, 127.1545522),
-        new naver.maps.LatLng(37.4864547, 127.1475785),
-        new naver.maps.LatLng(37.4861312, 127.1469669),
-        new naver.maps.LatLng(37.4860886, 127.1463447),
-        new naver.maps.LatLng(37.4857907, 127.1457009),
-        new naver.maps.LatLng(37.4853905, 127.1453791),
-        new naver.maps.LatLng(37.4824278, 127.143523),
-        new naver.maps.LatLng(37.4820617, 127.1434693),
-        new naver.maps.LatLng(37.481338, 127.1432548),
-        new naver.maps.LatLng(37.4765956, 127.1429114),
-        new naver.maps.LatLng(37.4755143, 127.1422784),
-        new naver.maps.LatLng(37.4709163, 127.1419888),
-        new naver.maps.LatLng(37.4703884, 127.1419566),
-        new naver.maps.LatLng(37.4683149, 127.1417527),
-        new naver.maps.LatLng(37.4670972, 127.1417313),
-        new naver.maps.LatLng(37.464551, 127.1400039),
-        new naver.maps.LatLng(37.4630863, 127.1385448),
-
-    ],
-    strokeColor: '#FF0066',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
-});
-var metro = new naver.maps.Polyline({ // 위례선 지선
-    map: map,
-    path: [
-        new naver.maps.LatLng(37.4703884, 127.1419566),
-        new naver.maps.LatLng(37.4700094, 127.1419244),
-        new naver.maps.LatLng(37.4698349, 127.1418439),
-        new naver.maps.LatLng(37.4697157, 127.141683),
-        new naver.maps.LatLng(37.4696561, 127.1414362),
-        new naver.maps.LatLng(37.4697242, 127.1396123),
-        new naver.maps.LatLng(37.4697157, 127.1393978),
-        new naver.maps.LatLng(37.469639, 127.1391295),
-        new naver.maps.LatLng(37.4689237, 127.1375524),
-        new naver.maps.LatLng(37.4688556, 127.1372842),
-        new naver.maps.LatLng(37.4689621, 127.1366512),
-        new naver.maps.LatLng(37.4689961, 127.13634),
-        new naver.maps.LatLng(37.4691068, 127.1327298),
-        new naver.maps.LatLng(37.4692048, 127.132601),
-        new naver.maps.LatLng(37.4694261, 127.1323167),
-        new naver.maps.LatLng(37.4701499, 127.131437),
-        new naver.maps.LatLng(37.470465, 127.1306216),
-        new naver.maps.LatLng(37.4705714, 127.1292322),
-        new naver.maps.LatLng(37.4706651, 127.1267216),
-    ],
-    strokeColor: '#FF0066',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
-});
-var metro = new naver.maps.Polyline({ // 위례신사선
-    map: map,
-    path: [
-        new naver.maps.LatLng(37.4741732, 127.1421872),
-        new naver.maps.LatLng(37.4743478, 127.1359967),
-        new naver.maps.LatLng(37.474467, 127.1350526),
-        new naver.maps.LatLng(37.4757272, 127.1280145),
-        new naver.maps.LatLng(37.4762167, 127.1236639),
-        new naver.maps.LatLng(37.4762891, 127.1234547),
-        new naver.maps.LatLng(37.476387, 127.1234279),
-        new naver.maps.LatLng(37.4764935, 127.1234171),
-        new naver.maps.LatLng(37.4772172, 127.1235405),
-        new naver.maps.LatLng(37.4779324, 127.1235727),
-        new naver.maps.LatLng(37.4782644, 127.1234976),
-        new naver.maps.LatLng(37.4876806, 127.1185838),
-        new naver.maps.LatLng(37.491903, 127.1166526),
-        new naver.maps.LatLng(37.4963465, 127.114421),
-        new naver.maps.LatLng(37.4966955, 127.1140455),
-        new naver.maps.LatLng(37.4968572, 127.1133267),
-        new naver.maps.LatLng(37.4965508, 127.1123504),
-        new naver.maps.LatLng(37.4943631, 127.1042501),
-        new naver.maps.LatLng(37.4943802, 127.1033596),
-        new naver.maps.LatLng(37.4950611, 127.1017717),
-        new naver.maps.LatLng(37.4955889, 127.1005057),
-        new naver.maps.LatLng(37.5005514, 127.0867406),
-        new naver.maps.LatLng(37.5007812, 127.085657),
-        new naver.maps.LatLng(37.5007727, 127.0849167),
-        new naver.maps.LatLng(37.500645, 127.0840048),
-        new naver.maps.LatLng(37.496687, 127.070583),
-        new naver.maps.LatLng(37.496704, 127.0701968),
-        new naver.maps.LatLng(37.4968062, 127.0699285),
-        new naver.maps.LatLng(37.4969679, 127.069671),
-        new naver.maps.LatLng(37.5240655, 127.0549189),
-        new naver.maps.LatLng(37.524542, 127.0543395),
-        new naver.maps.LatLng(37.5248228, 127.0535992),
-        new naver.maps.LatLng(37.5248824, 127.0527731),
-        new naver.maps.LatLng(37.5231806, 127.0392012),
-        new naver.maps.LatLng(37.5197258, 127.0281934),
-        new naver.maps.LatLng(37.5165517, 127.0205973),
-
-    ],
-    strokeColor: '#3333FF',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
-});
-var metro = new naver.maps.Polyline({ // 8호선 별내연장
-    map: map,
-    path: [
-        new naver.maps.LatLng(37.5501453, 127.1275263),
-        new naver.maps.LatLng(37.5555805, 127.1294628),
-        new naver.maps.LatLng(37.5561929, 127.1298813),
-        new naver.maps.LatLng(37.5567202, 127.1305357),
-        new naver.maps.LatLng(37.5570349, 127.1315121),
-        new naver.maps.LatLng(37.5571114, 127.1323274),
-        new naver.maps.LatLng(37.5568563, 127.133926),
-        new naver.maps.LatLng(37.5567457, 127.1351706),
-        new naver.maps.LatLng(37.5568138, 127.1359645),
-        new naver.maps.LatLng(37.5574857, 127.138915),
-        new naver.maps.LatLng(37.5577919, 127.139666),
-        new naver.maps.LatLng(37.5583787, 127.1403097),
-        new naver.maps.LatLng(37.5587359, 127.1405779),
-        new naver.maps.LatLng(37.5594078, 127.1407389),
-        new naver.maps.LatLng(37.5598246, 127.1407925),
-        new naver.maps.LatLng(37.5790432, 127.1380352),
-        new naver.maps.LatLng(37.587673, 127.1379601),
-        new naver.maps.LatLng(37.5918388, 127.1378957),
-        new naver.maps.LatLng(37.5925699, 127.1380352),
-        new naver.maps.LatLng(37.5934625, 127.1384858),
-        new naver.maps.LatLng(37.5940661, 127.139033),
-        new naver.maps.LatLng(37.5946866, 127.1396767),
-        new naver.maps.LatLng(37.5969053, 127.1420049),
-        new naver.maps.LatLng(37.5972539, 127.1422945),
-        new naver.maps.LatLng(37.5978489, 127.1425628),
-        new naver.maps.LatLng(37.5982995, 127.1426379),
-        new naver.maps.LatLng(37.5990135, 127.1425306),
-        new naver.maps.LatLng(37.5994045, 127.1423589),
-        new naver.maps.LatLng(37.6010111, 127.1412646),
-        new naver.maps.LatLng(37.6014361, 127.1410929),
-        new naver.maps.LatLng(37.609889, 127.1382551),
-        new naver.maps.LatLng(37.610484, 127.1381049),
-        new naver.maps.LatLng(37.6116568, 127.1379655),
-        new naver.maps.LatLng(37.6131952, 127.1379869),
-        new naver.maps.LatLng(37.6140493, 127.1381908),
-        new naver.maps.LatLng(37.6148439, 127.1387433),
-        new naver.maps.LatLng(37.6152221, 127.139151),
-        new naver.maps.LatLng(37.6158467, 127.1401863),
-        new naver.maps.LatLng(37.6192801, 127.1478253),
-        new naver.maps.LatLng(37.619586, 127.148292),
-        new naver.maps.LatLng(37.6199684, 127.1486836),
-        new naver.maps.LatLng(37.6207587, 127.1492254),
-        new naver.maps.LatLng(37.6214046, 127.1493756),
-        new naver.maps.LatLng(37.6241154, 127.1497135),
-        new naver.maps.LatLng(37.6265159, 127.1500247),
-        new naver.maps.LatLng(37.6274166, 127.1501051),
-        new naver.maps.LatLng(37.6279647, 127.1500247),
-        new naver.maps.LatLng(37.6288781, 127.1497511),
-        new naver.maps.LatLng(37.6296768, 127.1491878),
-        new naver.maps.LatLng(37.629987, 127.148882),
-        new naver.maps.LatLng(37.6321919, 127.1462267),
-        new naver.maps.LatLng(37.6329651, 127.1449982),
-        new naver.maps.LatLng(37.6333857, 127.1441721),
-        new naver.maps.LatLng(37.6379227, 127.133175),
-        new naver.maps.LatLng(37.6381648, 127.1327727),
-        new naver.maps.LatLng(37.6388657, 127.1315872),
-        new naver.maps.LatLng(37.6399617, 127.1300315),
-        new naver.maps.LatLng(37.6451227, 127.1242594),
-
-    ],
-    strokeColor: '#f14c82',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
-});
-var metro = new naver.maps.Polyline({ // 3호선 하남연장
-    map: map,
-    path: [
-        new naver.maps.LatLng(37.5020196, 127.1281673),
-        new naver.maps.LatLng(37.5057774, 127.1317964),
-        new naver.maps.LatLng(37.5093435, 127.1339743),
-        new naver.maps.LatLng(37.5125604, 127.1357124),
-        new naver.maps.LatLng(37.5131476, 127.1364312),
-        new naver.maps.LatLng(37.5135391, 127.1371715),
-        new naver.maps.LatLng(37.5136242, 127.1389096),
-        new naver.maps.LatLng(37.5124072, 127.1419029),
-        new naver.maps.LatLng(37.506671, 127.1578353),
-        new naver.maps.LatLng(37.5062455, 127.158715),
-        new naver.maps.LatLng(37.5055135, 127.1599381),
-        new naver.maps.LatLng(37.5049348, 127.1611719),
-        new naver.maps.LatLng(37.5041177, 127.1681135),
-        new naver.maps.LatLng(37.5046114, 127.1914594),
-        new naver.maps.LatLng(37.5051561, 127.1933477),
-        new naver.maps.LatLng(37.5119307, 127.1979826),
-        new naver.maps.LatLng(37.5316041, 127.2018449),
-        new naver.maps.LatLng(37.5330675, 127.2023921),
-        new naver.maps.LatLng(37.5339013, 127.2031646),
-        new naver.maps.LatLng(37.538002, 127.2045915),
-        new naver.maps.LatLng(37.5405456, 127.2064101),
-        new naver.maps.LatLng(37.5417026, 127.2068446),
-    ],
-    strokeColor: '#fe5d10',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
-});
-var metro = new naver.maps.Polyline({ // GTX-A
-    map: map,
-    path: [
-        new naver.maps.LatLng(37.7209926, 126.728081), // 파주 시작점
-        new naver.maps.LatLng(37.7001384, 126.728199), // 가좌천
-        new naver.maps.LatLng(37.6971247, 126.7285745),
-        new naver.maps.LatLng(37.6948326, 126.7291753),
-        new naver.maps.LatLng(37.6934573, 126.729583),
-        new naver.maps.LatLng(37.6705657, 126.7414062),
-        new naver.maps.LatLng(37.6684426, 126.7426078),
-        new naver.maps.LatLng(37.6671347, 126.7441528),
-        new naver.maps.LatLng(37.666778, 126.7447536),
-        new naver.maps.LatLng(37.6652153, 126.748337), // 킨텍스역
-        new naver.maps.LatLng(37.6612915, 126.7571347),
-        new naver.maps.LatLng(37.6609857, 126.7576497),
-        new naver.maps.LatLng(37.6604592, 126.7584221),
-        new naver.maps.LatLng(37.659389, 126.7596023),
-        new naver.maps.LatLng(37.6581829, 126.7604606),
-        new naver.maps.LatLng(37.6546664, 126.7622202),
-        new naver.maps.LatLng(37.6526618, 126.7635934),
-        new naver.maps.LatLng(37.6509799, 126.7652242),
-        new naver.maps.LatLng(37.6499096, 126.7666619),
-        new naver.maps.LatLng(37.637243, 126.7866819),
-        new naver.maps.LatLng(37.6365293, 126.787669),
-        new naver.maps.LatLng(37.6345921, 126.7921321),
-        new naver.maps.LatLng(37.6329608, 126.7979686),
-        new naver.maps.LatLng(37.632553, 126.8007581),
-        new naver.maps.LatLng(37.6323831, 126.8042772),
-        new naver.maps.LatLng(37.632451, 126.8101137), // 대곡역
-        new naver.maps.LatLng(37.6323746, 126.8179457),
-        new naver.maps.LatLng(37.6322216, 126.820113),
-        new naver.maps.LatLng(37.6297236, 126.840369),
-        new naver.maps.LatLng(37.6292477, 126.8433516),
-        new naver.maps.LatLng(37.6243023, 126.8694656),
-        new naver.maps.LatLng(37.6223308, 126.8799369),
-        new naver.maps.LatLng(37.621617, 126.8837993),
-        new naver.maps.LatLng(37.6210732, 126.8893569),
-        new naver.maps.LatLng(37.6200874, 126.9036906),
-        new naver.maps.LatLng(37.6188637, 126.9212859), // 연신내역
-        new naver.maps.LatLng(37.6187617, 126.9235175),
-        new naver.maps.LatLng(37.6183198, 126.9277017),
-        new naver.maps.LatLng(37.6174869, 126.931371),
-        new naver.maps.LatLng(37.6161612, 126.9349544),
-        new naver.maps.LatLng(37.6151074, 126.9369714),
-        new naver.maps.LatLng(37.6134416, 126.9395034),
-        new naver.maps.LatLng(37.6045003, 126.9520133),
-        new naver.maps.LatLng(37.6033953, 126.953408),
-        new naver.maps.LatLng(37.6016783, 126.9551032),
-        new naver.maps.LatLng(37.6004373, 126.9561975),
-        new naver.maps.LatLng(37.5985672, 126.9573991),
-        new naver.maps.LatLng(37.5716497, 126.975091),
-        new naver.maps.LatLng(37.5701191, 126.9760995),
-        new naver.maps.LatLng(37.5693537, 126.9765501),
-        new naver.maps.LatLng(37.568835, 126.9767861),
-        new naver.maps.LatLng(37.5678911, 126.9770544),
-        new naver.maps.LatLng(37.5664624, 126.9771295),
-        new naver.maps.LatLng(37.5644979, 126.9770973),
-        new naver.maps.LatLng(37.5639451, 126.9770544),
-        new naver.maps.LatLng(37.5626949, 126.9766359),
-        new naver.maps.LatLng(37.5623122, 126.9764536),
-        new naver.maps.LatLng(37.5589528, 126.9739537),
-        new naver.maps.LatLng(37.5580258, 126.9733636),
-        new naver.maps.LatLng(37.5572433, 126.9730203),
-        new naver.maps.LatLng(37.5557804, 126.9726877), // 서울역
-        new naver.maps.LatLng(37.5549638, 126.9726126),
-        new naver.maps.LatLng(37.5524972, 126.9722478),
-        new naver.maps.LatLng(37.552174, 126.9722264),
-        new naver.maps.LatLng(37.5514765, 126.9722478),
-        new naver.maps.LatLng(37.5503197, 126.9724839),
-        new naver.maps.LatLng(37.5495542, 126.9728057),
-        new naver.maps.LatLng(37.5490438, 126.9731062),
-        new naver.maps.LatLng(37.547921, 126.9740718),
-        new naver.maps.LatLng(37.546611, 126.9761961),
-        new naver.maps.LatLng(37.5459645, 126.9785349),
-        new naver.maps.LatLng(37.5382912, 127.015764),
-        new naver.maps.LatLng(37.5309745, 127.0417063),
-        new naver.maps.LatLng(37.5295111, 127.0466416),
-        new naver.maps.LatLng(37.5281667, 127.0497315),
-        new naver.maps.LatLng(37.5271797, 127.0513837),
-        new naver.maps.LatLng(37.5266862, 127.0519846),
-        new naver.maps.LatLng(37.524508, 127.0542162),
-        new naver.maps.LatLng(37.5095477, 127.0627349), // 삼성역
-        new naver.maps.LatLng(37.5045943, 127.0655458),
-        new naver.maps.LatLng(37.5029942, 127.0674555),
-        new naver.maps.LatLng(37.5026027, 127.068228),
-        new naver.maps.LatLng(37.5019899, 127.0705454),
-        new naver.maps.LatLng(37.5003726, 127.0777767),
-        new naver.maps.LatLng(37.4997258, 127.0800941),
-        new naver.maps.LatLng(37.4949079, 127.0939987),
-        new naver.maps.LatLng(37.4943631, 127.0950286),
-        new naver.maps.LatLng(37.4937673, 127.0958011),
-        new naver.maps.LatLng(37.4924393, 127.0966809),
-        new naver.maps.LatLng(37.4912646, 127.0973032),
-        new naver.maps.LatLng(37.49026, 127.09814),
-        new naver.maps.LatLng(37.486344, 127.1028607), // 수서역
-        new naver.maps.LatLng(37.4852713, 127.1042152),
-        new naver.maps.LatLng(37.4840965, 127.1053096),
-        new naver.maps.LatLng(37.4688045, 127.115223),
-        new naver.maps.LatLng(37.4671696, 127.1161242),
-        new naver.maps.LatLng(37.4634567, 127.1176048),
-        new naver.maps.LatLng(37.4613447, 127.1180769),
-        new naver.maps.LatLng(37.4593008, 127.1183773),
-        new naver.maps.LatLng(37.4407328, 127.118785), // 탄천
-        new naver.maps.LatLng(37.4219897, 127.1175833),
-        new naver.maps.LatLng(37.4182746, 127.1174546),
-        new naver.maps.LatLng(37.4150025, 127.1177121),
-        new naver.maps.LatLng(37.3946846, 127.1205445), // 성남역
-        new naver.maps.LatLng(37.3942755, 127.120566),
-        new naver.maps.LatLng(37.3929117, 127.1204587),
-        new naver.maps.LatLng(37.3909426, 127.119933),
-        new naver.maps.LatLng(37.3890673, 127.1188815),
-        new naver.maps.LatLng(37.3878397, 127.1178838),
-        new naver.maps.LatLng(37.3791016, 127.1081205),
-        new naver.maps.LatLng(37.3774902, 127.1062966),
-        new naver.maps.LatLng(37.3749069, 127.1044834),
-        new naver.maps.LatLng(37.3722126, 127.1035929),
-        new naver.maps.LatLng(37.3713771, 127.1035071),
-        new naver.maps.LatLng(37.2987951, 127.1038451), // 용인역
-        new naver.maps.LatLng(37.2920012, 127.1039148),
-        new naver.maps.LatLng(37.250781, 127.1040436),
-        new naver.maps.LatLng(37.2479456, 127.1039577),
-        new naver.maps.LatLng(37.2455201, 127.1037002),
-        new naver.maps.LatLng(37.2409763, 127.1028419),
-        new naver.maps.LatLng(37.2377306, 127.101769),
-        new naver.maps.LatLng(37.2243362, 127.0971342),
-        new naver.maps.LatLng(37.2221492, 127.0965334),
-        new naver.maps.LatLng(37.2195861, 127.0960613),
-        new naver.maps.LatLng(37.2163737, 127.0955892),
-        new naver.maps.LatLng(37.1997047, 127.0955034), // 동탄역
-    ],
-    strokeColor: '#ab087d',
-    strokeOpacity: 0.6,
-    strokeWeight: 3
-});
+metro.setMap(null);
