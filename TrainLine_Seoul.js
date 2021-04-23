@@ -5439,3 +5439,141 @@ var metro = new naver.maps.Polyline({ // 대구 1호선
     strokeOpacity: 1,
     strokeWeight: 2
 });
+var metro = new naver.maps.Polyline({ // 광주 1호선
+    map: map,
+    path: [
+        new naver.maps.LatLng(35.1246813, 126.7687476),//평동
+        new naver.maps.LatLng(35.125232, 126.7751045),
+        new naver.maps.LatLng(35.1254382, 126.7760593),
+        new naver.maps.LatLng(35.1257014, 126.7767406),
+        new naver.maps.LatLng(35.1312295, 126.7870725),
+        new naver.maps.LatLng(35.131598, 126.7876358),
+        new naver.maps.LatLng(35.1319973, 126.788081),
+        new naver.maps.LatLng(35.1325742, 126.7884967),//도산
+        new naver.maps.LatLng(35.1367704, 126.7910046),
+        new naver.maps.LatLng(35.138376, 126.7920131),//광주송정
+        new naver.maps.LatLng(35.1396832, 126.79285),
+        new naver.maps.LatLng(35.1399947, 126.7931075),
+        new naver.maps.LatLng(35.1427802, 126.7959023),
+        new naver.maps.LatLng(35.1430654, 126.796369),
+        new naver.maps.LatLng(35.143254, 126.7968626),
+        new naver.maps.LatLng(35.14339, 126.7973722),
+        new naver.maps.LatLng(35.1434119, 126.7975438),
+        new naver.maps.LatLng(35.1436378, 126.8004621),//송정공원
+        new naver.maps.LatLng(35.144241, 126.8088225),
+        new naver.maps.LatLng(35.1442761, 126.8095843),
+        new naver.maps.LatLng(35.1442673, 126.8104855),
+        new naver.maps.LatLng(35.144219, 126.8110273),
+        new naver.maps.LatLng(35.1439383, 126.8129317),//공항
+        new naver.maps.LatLng(35.1420082, 126.8259887),
+        new naver.maps.LatLng(35.1417099, 126.8279199),
+        new naver.maps.LatLng(35.1403851, 126.8323079),
+        new naver.maps.LatLng(35.1402448, 126.8331984),
+        new naver.maps.LatLng(35.1402448, 126.83381),
+        new naver.maps.LatLng(35.1402974, 126.8345288),
+        new naver.maps.LatLng(35.1404378, 126.8353227),
+        new naver.maps.LatLng(35.140622, 126.835945),
+        new naver.maps.LatLng(35.1408413, 126.8364385),
+        new naver.maps.LatLng(35.1436926, 126.8423931),//김대중컨벤션센터
+        new naver.maps.LatLng(35.1471207, 126.8494714),//상무
+        new naver.maps.LatLng(35.1474957, 126.8503109),
+        new naver.maps.LatLng(35.1485045, 126.8521938),
+        new naver.maps.LatLng(35.1495309, 126.8543718),
+        new naver.maps.LatLng(35.1499257, 126.8555412),
+        new naver.maps.LatLng(35.1500485, 126.8559597),
+        new naver.maps.LatLng(35.150702, 126.8596826),//운천
+        new naver.maps.LatLng(35.1513863, 126.8638775),
+        new naver.maps.LatLng(35.1515266, 126.8665919),
+        new naver.maps.LatLng(35.1516538, 126.8706394),//쌍촌
+        new naver.maps.LatLng(35.151724, 126.8739707),
+        new naver.maps.LatLng(35.1518117, 126.8754835),
+        new naver.maps.LatLng(35.1518512, 126.8760038),
+        new naver.maps.LatLng(35.152167, 126.8778277),//화정
+        new naver.maps.LatLng(35.1525245, 126.8797133),
+        new naver.maps.LatLng(35.1534894, 126.8849919),//농성
+        new naver.maps.LatLng(35.1536648, 126.8860111),
+        new naver.maps.LatLng(35.1536385, 126.8866012),
+        new naver.maps.LatLng(35.1535508, 126.8870089),
+        new naver.maps.LatLng(35.153121, 126.8879209),
+        new naver.maps.LatLng(35.1514104, 126.8896482),
+        new naver.maps.LatLng(35.1511823, 126.8900237),
+        new naver.maps.LatLng(35.1509104, 126.8906889),
+        new naver.maps.LatLng(35.1508051, 126.8911717),
+        new naver.maps.LatLng(35.1507788, 126.8915579),
+        new naver.maps.LatLng(35.1508227, 126.8921158),
+        new naver.maps.LatLng(35.1509192, 126.8925557),
+        new naver.maps.LatLng(35.1519718, 126.8958656),//돌고개
+        new naver.maps.LatLng(35.1532262, 126.8997333),
+        new naver.maps.LatLng(35.1533403, 126.8999586),
+        new naver.maps.LatLng(35.1534762, 126.9001839),
+        new naver.maps.LatLng(35.1549587, 126.9021151),//양동시장
+        new naver.maps.LatLng(35.155849, 126.903365),
+        new naver.maps.LatLng(35.1560464, 126.9037513),
+        new naver.maps.LatLng(35.1562131, 126.904218),
+        new naver.maps.LatLng(35.1563052, 126.9047276),
+        new naver.maps.LatLng(35.1563227, 126.9051675),
+        new naver.maps.LatLng(35.1563052, 126.9054893),
+        new naver.maps.LatLng(35.1562482, 126.9057951),
+        new naver.maps.LatLng(35.156178, 126.9060794),
+        new naver.maps.LatLng(35.1560903, 126.9063155),
+        new naver.maps.LatLng(35.1559148, 126.9066963),
+        new naver.maps.LatLng(35.1533666, 126.9105748),//금남로5가
+        new naver.maps.LatLng(35.1502393, 126.9153009),//금남로4가
+        new naver.maps.LatLng(35.1480111, 126.9186429),
+        new naver.maps.LatLng(35.1476075, 126.9191042),
+        new naver.maps.LatLng(35.1472215, 126.919469),
+        new naver.maps.LatLng(35.1464057, 126.9200376),
+        new naver.maps.LatLng(35.1455942, 126.9204024),//문화전당
+        new naver.maps.LatLng(35.1452828, 126.9205097),
+        new naver.maps.LatLng(35.1444844, 126.9206385),
+        new naver.maps.LatLng(35.1432123, 126.9206492),
+        new naver.maps.LatLng(35.1428526, 126.9206706),
+        new naver.maps.LatLng(35.1424754, 126.9207457),
+        new naver.maps.LatLng(35.1418876, 126.920971),
+        new naver.maps.LatLng(35.1386984, 126.9234414),//남광주
+        new naver.maps.LatLng(35.138444, 126.9236479),
+        new naver.maps.LatLng(35.1380316, 126.9240449),
+        new naver.maps.LatLng(35.136505, 126.9256864),
+        new naver.maps.LatLng(35.1342939, 126.9275532),
+        new naver.maps.LatLng(35.1336973, 126.9278858),
+        new naver.maps.LatLng(35.1320565, 126.9287441),//학동중심사입구
+        new naver.maps.LatLng(35.1269299, 126.9311205),
+        new naver.maps.LatLng(35.1227683, 126.9326199),//소태
+        new naver.maps.LatLng(35.1196991, 126.9336203),
+        new naver.maps.LatLng(35.1176456, 126.9340388),
+        new naver.maps.LatLng(35.1168908, 126.934307),
+        new naver.maps.LatLng(35.1149777, 126.9351331),
+        new naver.maps.LatLng(35.1146705, 126.9352619),
+        new naver.maps.LatLng(35.1141439, 126.9353262),
+        new naver.maps.LatLng(35.1105894, 126.9352511),
+        new naver.maps.LatLng(35.1100628, 126.9352082),
+        new naver.maps.LatLng(35.109545, 126.9350902),
+        new naver.maps.LatLng(35.1077984, 126.934189),
+        new naver.maps.LatLng(35.107364, 126.9340549),
+        new naver.maps.LatLng(35.107127, 126.934028),
+        new naver.maps.LatLng(35.1064358, 126.9339824),//녹동
+    ],
+    strokeColor: '#009088',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 광주 2호선
+    map: map,
+    path: [
+        new naver.maps.LatLng(),
+        new naver.maps.LatLng(),
+    ],
+    strokeColor: '#0471c3',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
+var metro = new naver.maps.Polyline({ // 대전 1호선
+    map: map,
+    path: [
+        new naver.maps.LatLng(),
+        new naver.maps.LatLng(),
+    ],
+    strokeColor: '#007448',
+    strokeOpacity: 1,
+    strokeWeight: 2
+});
